@@ -12,12 +12,9 @@ var tanned_leather = <betterwithmods:material:6>;
 var hemp_cloth = <betterwithmods:material:4>;
 var hemp_fiber = <betterwithmods:material:3>;
 
-# =================================================
-# vanilla changes
-# =================================================
 
 # =================================================
-# bwm + bop
+# bop
 # =================================================
 //this is all writen by hand... also minetweaker recipe thingy just updated so that will change :P
 
@@ -30,7 +27,7 @@ recipes.remove(<biomesoplenty:enderporter>);
 
 
 # ================================================
-# vanilla + primalcore + bwm changes
+# primalcore + bwm changes
 # ================================================
 //remove iron from iron ore, and make iron ore smelt into pig iron
 furnace.remove(<minecraft:iron_ingot>, <minecraft:iron_ore>);
@@ -72,7 +69,7 @@ mods.betterwithmods.Cauldron.add(<betterwithmods:material:13>, null, [<primal:la
 mods.betterwithmods.Cauldron.add(<betterwithmods:material:13>, null, [<primal:suet> * 2]);
 mods.betterwithmods.Cauldron.add(<betterwithmods:material:12>, null, [<primal:horse_meat_cooked>]);
 mods.betterwithmods.StokedCrucible.add(<minecraft:blaze_rod>, null, [<primal:golden_stick>, hellfire_dust]);
-
+mods.betterwithmods.StokedCauldron.add(<minecraft:water_bucket>, null, [<minecraft:bucket>, <biomesoplenty:hard_ice>]);
 
 
 //add grinding recipes
@@ -154,7 +151,6 @@ recipes.remove(<primal:nether_palm_slab>);
 recipes.remove(<primal:pressplate_nether_palm>);
 recipes.remove(<primal:nether_gallagher>);
 recipes.remove(<primal:worktable_netherstone>);
-recipes.remove(<primal:salo>);
 recipes.remove(<primal:pressplate_dirt>);
 recipes.remove(<primal:pressplate_grass>);
 recipes.remove(<primal:pressplate_glass>);
@@ -163,6 +159,44 @@ recipes.addShapeless(<primal:silk_cordage_coiled>, [<primal:lard>, <primal:silk_
 recipes.addShapeless(<primal:torch_wood> * 4, [<primal:silk_cordage_coiled>, <ore:stickWood>]);
 recipes.addShapeless(<primal:torch_wood> * 3, [<ore:stickWood>, <primal:plant_tinder>, <primal:plant_tinder>, <primal:plant_tinder>, <primal:plant_tinder>, <primal:plant_tinder>]);
 recipes.addShapeless(<primal:golden_stick>, [<minecraft:gold_ingot>, <minecraft:gold_ingot>, <minecraft:gold_ingot>]);
+mods.betterwithmods.Cauldron.add(<betterwithmods:donut>, null, [<betterwithmods:material:37>, <primal:rush_seeds> * 10]);
+
+
+
+
+
+# ===============================================
+# embers fixes (todo)
+# ===============================================
+
+
+
+furnace.remove(<embers:ingotLead>);
+furnace.remove(<embers:ingotSilver>);
+furnace.remove(<embers:ingotCopper>);
+recipes.remove(<embers:blendCaminite>);
+
+
+
+
+# ================================================
+# ore dictionary fixes
+# ================================================
+
+<ore:ingotBrass>.remove(<primal:brass_ingot>);
+<ore:ingotBronze>.remove(<primal:bronze_ingot>);
+<ore:ingotCopper>.remove(<primal:copper_ingot>);
+<ore:ingotLead>.remove(<primal:lead_ingot>);
+<ore:ingotPigiron>.remove(<primal:pigiron_ingot>);
+<ore:ingotSilver>.remove(<primal:silver_ingot>);
+<ore:ingotTin>.remove(<primal:tin_ingot>);
+<ore:ingotVanadium>.remove(<primal:vanadium_ingot>);
+<ore:ingotWootz>.remove(<primal:wootz_ingot>);
+<ore:ingotZinc>.remove(<primal:zinc_ingot>);
+
+
+
+
 
 
 # ================================================
@@ -183,6 +217,7 @@ recipes.remove(<toughasnails:charcoal_filter>);
 recipes.addShapedMirrored(<toughasnails:charcoal_filter> * 3, [[null, <minecraft:paper>, null], [null, <minecraft:coal:1>, null], [null, <minecraft:paper>, null]]);
 recipes.remove(<minecraft:shield>);
 recipes.remove(<toughasnails:jelled_slime>);
+recipes.addShapeless(<minecraft:flint>, [<minecraft:gravel>, <minecraft:gravel>, <minecraft:gravel>]);
 
 
 //recipes.addShaped(<minecraft:lead>
@@ -229,10 +264,10 @@ recipes.addShapeless(<betterwithmods:material:35>, [<minecraft:redstone>, <prima
 //saw using pig iron
 //progression with out iron
 //couldron with polished stone
-//ferro carbonite slack as byproduct of iron processing, used to be processed into more iron. done
-//knife from bwm made with pig iron. done, sortof
+//ferro carbonite slack as byproduct of iron processing, used to be processed into more iron. done.
+//knife from bwm made with pig iron. done.
 //pig iron made from smelting iron ore. done
 //quartz tools now pig iron tools. done
-//remove dirt, grass and glass pressure plates.
+//remove dirt, grass and glass pressure plates. done.
 //remove iron strand recipe. done
 //make unfired proclin require a cauldron
