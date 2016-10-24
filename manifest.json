@@ -11,7 +11,7 @@
   "manifestType": "minecraftModpack",
   "manifestVersion": 1,
   "name": "Darkmill",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "author": "meelock_is_awesome",
   "files": [
     {
@@ -81,12 +81,12 @@
     },
     {
       "projectID": 74924,
-      "fileID": 2337607,
+      "fileID": 2338788,
       "required": true
     },
     {
       "projectID": 238222,
-      "fileID": 2338201,
+      "fileID": 2338722,
       "required": true
     },
     {
@@ -300,11 +300,6 @@
       "required": false
     },
     {
-      "projectID": 251792,
-      "fileID": 2336999,
-      "required": false
-    },
-    {
       "projectID": 73488,
       "fileID": 2301859,
       "required": true
@@ -372,6 +367,16 @@
     {
       "projectID": 226294,
       "fileID": 2338559,
+      "required": true
+    },
+    {
+      "projectID": 247053,
+      "fileID": 2313364,
+      "required": true
+    },
+    {
+      "projectID": 251792,
+      "fileID": 2336999,
       "required": true
     }
   ],

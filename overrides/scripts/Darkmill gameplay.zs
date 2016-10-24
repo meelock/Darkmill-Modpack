@@ -172,6 +172,11 @@ recipes.remove(<primal:nether_cloth>);
 <primal:nether_cloth>.displayName = "Rush Seed Flour";
 recipes.addShapeless(<primal:nether_cloth>, [<primal:rush_seeds>, <primal:rush_seeds>, <primal:rush_seeds>, <primal:rush_seeds>, <primal:rush_seeds>, <primal:rush_seeds>, <primal:rush_seeds>, <primal:rush_seeds>, <primal:rush_seeds>]);
 recipes.addShapeless(<primal:wheat_ground>, [<primal:nether_cloth>, <primal:nether_cloth>, <primal:nether_cloth>, <ore:foodSalt>]);
+recipes.addShaped(<minecraft:bucket>, [[<primal:iron_sheet>, null, <primal:iron_sheet>], [<primal:iron_sheet>, null, <primal:iron_sheet>], [<primal:iron_sheet>, <primal:iron_sheet>, <primal:iron_sheet>]]);
+recipes.remove(<primal:carbonate_flag>);
+recipes.remove(<primal:carbonate_ferro_flag>);
+
+
 
 
 # ===============================================
@@ -184,6 +189,16 @@ furnace.remove(<embers:ingotLead>);
 furnace.remove(<embers:ingotSilver>);
 furnace.remove(<embers:ingotCopper>);
 recipes.remove(<embers:blendCaminite>);
+//hows' this formating?
+recipes.remove(<embers:itemPipe>);
+recipes.addShapedMirrored(<embers:itemPipe> * 4,
+      [[null, <betterwithmods:material:14>, null],
+       [<ore:ingotLead>, <ore:plateLead>, <ore:ingotLead>],
+       [null, <betterwithmods:material:14>, null]]);
+recipes.remove(<embers:blockFurnace>);
+recipes.addShaped(<embers:blockFurnace>, [[<embers:brickCaminite>, <embers:plateCaminite>, <embers:brickCaminite>],
+                 [<embers:brickCaminite>, <embers:blockCopper>, <embers:brickCaminite>],
+                 [<ore:ingotIron>, <minecraft:furnace:*>, <ore:ingotIron>]]);
 
 
 
@@ -220,6 +235,8 @@ recipes.remove(<embers:blendCaminite>);
 <primal:silver_dust>.displayName = "Unrefined Silver Dust";
 <primal:silver_ingot>.displayName = "Slag Silver Ingot";
 <primal:lead_ingot>.displayName = "Slag Lead Ingot";
+<primal:carbonate_stone>.displayName = "Volcanic Mixed Slag";
+<primal:carbonate_ferro_stone>.displayName = "Volcanic Ferro Slag";
 
 
 
