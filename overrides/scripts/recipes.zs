@@ -122,10 +122,11 @@ recipes.addShaped(<betterwithmods:single_machine:1>,
 # ==================================================
 // Pipe
 recipes.remove(<charsetpipes:pipe>);
-recipes.addShaped(<charsetpipes:pipe> * 12,
-	[[soulforged_steel, <minecraft:glass>, soulforged_steel]]);
-recipes.addShaped(<charsetpipes:pipe> * 12,
-	[[soulforged_steel], [<minecraft:glass>], [soulforged_steel]]);
+//recipes.addShaped(<charsetpipes:pipe> * 12,
+//	[[soulforged_steel, <minecraft:glass>, soulforged_steel]]);
+//recipes.addShaped(<charsetpipes:pipe> * 12,
+//	[[soulforged_steel], [<minecraft:glass>], [soulforged_steel]]);
+recipes.remove(<charsetpipes:shifter>);
 // Redstone Cable
 recipes.addShaped(charset_wire * 8,
 	[[hellfire_dust, <minecraft:redstone>, hellfire_dust],

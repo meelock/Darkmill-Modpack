@@ -27,4 +27,5 @@
 
 // ================================================================================
 //#MARKER ADD SHAPED
+recipes.addShaped(<minecraft:flint_and_steel:60>, [[<ore:sheetIron>, null], [null, <minecraft:flint>]]);
 recipes.addShaped(<betterwithmods:material:8> * 2, [[<primal:quartz_workblade:2>.anyDamage()], [<betterwithmods:material:33>]]);

@@ -137,6 +137,10 @@ recipes.remove(<primal:netherstone>);
 recipes.addShapeless(<primal:netherstone> * 5, [<minecraft:planks:5>, <betterwithmods:material:13>, <minecraft:planks:5>, <minecraft:planks:5>, <minecraft:planks:5>, <minecraft:planks:5>]);
 recipes.addShaped(<betterwithmods:saw>, [[<primal:vanadium_ingot>, <primal:vanadium_ingot>, <primal:vanadium_ingot>], [<ore:gearWood>, <betterwithmods:material:9>, <ore:gearWood>], [<ore:plankWood>, <ore:gearWood>, <ore:plankWood>]]);
 recipes.addShaped(<betterwithmods:saw>, [[<primal:vanadium_ingot>, <primal:vanadium_ingot>, <primal:vanadium_ingot>], [<ore:gearWood>, <betterwithmods:material:9>, <ore:gearWood>], [<betterwithmods:wood_siding:*>, <ore:gearWood>, <betterwithmods:wood_siding:*>]]);
+mods.betterwithmods.Cauldron.add(<minecraft:ice>, <minecraft:bucket>, [<toughasnails:ice_cube>, <minecraft:water_bucket>]);
+mods.betterwithmods.Cauldron.add(<minecraft:water_bucket>, null, [<minecraft:bucket>, <minecraft:ice>]);
+
+
 
 
 
@@ -160,13 +164,18 @@ recipes.addShapeless(<primal:torch_wood> * 4, [<primal:silk_cordage_coiled>, <or
 recipes.addShapeless(<primal:torch_wood> * 3, [<ore:stickWood>, <primal:plant_tinder>, <primal:plant_tinder>, <primal:plant_tinder>, <primal:plant_tinder>, <primal:plant_tinder>]);
 recipes.addShapeless(<primal:golden_stick>, [<minecraft:gold_ingot>, <minecraft:gold_ingot>, <minecraft:gold_ingot>]);
 mods.betterwithmods.Cauldron.add(<betterwithmods:donut>, null, [<betterwithmods:material:37>, <primal:rush_seeds> * 10]);
-
-
-
+recipes.remove(<primal:carbonate_stone>);
+recipes.removeShapeless(<minecraft:flint_and_steel>, [<minecraft:iron_ingot>, <minecraft:flint>]);
+recipes.remove(<primal:iron_ring>);
+recipes.addShapeless(<primal:iron_ring> * 6, [<primal:quartz_gallagher>, <ore:plateIron>]);
+recipes.remove(<primal:nether_cloth>);
+<primal:nether_cloth>.displayName = "Rush Seed Flour";
+recipes.addShapeless(<primal:nether_cloth>, [<primal:rush_seeds>, <primal:rush_seeds>, <primal:rush_seeds>, <primal:rush_seeds>, <primal:rush_seeds>, <primal:rush_seeds>, <primal:rush_seeds>, <primal:rush_seeds>, <primal:rush_seeds>]);
+recipes.addShapeless(<primal:wheat_ground>, [<primal:nether_cloth>, <primal:nether_cloth>, <primal:nether_cloth>, <ore:foodSalt>]);
 
 
 # ===============================================
-# embers fixes (todo)
+# embers fixes and changes
 # ===============================================
 
 
@@ -193,6 +202,28 @@ recipes.remove(<embers:blendCaminite>);
 <ore:ingotVanadium>.remove(<primal:vanadium_ingot>);
 <ore:ingotWootz>.remove(<primal:wootz_ingot>);
 <ore:ingotZinc>.remove(<primal:zinc_ingot>);
+<ore:dustCopper>.remove(<primal:copper_dust>);
+<ore:dustBronze>.remove(<primal:bronze_dust>);
+
+
+# ================================================
+# copper + lead + silver fixes
+# ================================================
+
+<primal:copper_dust>.displayName = "Dirty Copper Dust";
+<primal:bronze_dust>.displayName = "Copper Sludge";
+<primal:bronze_ingot>.displayName = "Crude Slag Copper Ingot";
+<primal:copper_ingot>.displayName = "Refined Slag Copper Ingot";
+<primal:brass_dust>.displayName = "Clean Copper Dust";
+<primal:carbonate_slack>.displayName = "Mixed Sludge";
+
+mods.betterwithmods.Mill.add(<primal:copper_dust>, <primal:bronze_dust>, [<embers:oreCopper>]);
+mods.betterwithmods.StokedCrucible.add(<primal:bronze_ingot>, <primal:carbonate_slack>, [<primal:copper_dust>]);
+mods.betterwithmods.StokedCauldron.add(<primal:brass_dust>, <primal:carbonate_slack>, [<primal:copper_dust>, <minecraft:ice>]);
+mods.betterwithmods.StokedCrucible.add(<primal:copper_ingot>, <primal:carbonate_slack>, [<primal:brass_dust>]);
+mods.betterwithmods.StokedCrucible.add(<embers:ingotCopper>, <primal:carbonate_slack> * 3, [<primal:bronze_ingot>]);
+mods.betterwithmods.StokedCrucible.add(<embers:ingotCopper> * 3, <primal:carbonate_slack> * 1, [<primal:copper_ingot>]);
+mods.betterwithmods.StokedCrucible.add(<embers:blendCaminite>, null, [<minecraft:clay>, <minecraft:clay>, <minecraft:clay>, <ore:foodSalt>, <primal:carbonate_slack>, <primal:carbonate_slack>, <primal:carbonate_slack>]);
 
 
 
@@ -257,7 +288,7 @@ recipes.addShapeless(<betterwithmods:material:35>, [<minecraft:redstone>, <prima
 
 
 
-
+//make caminite blend require mixed sludge
 
 //plant cloth for wind mills. done.
 //pig iron-iron. done
