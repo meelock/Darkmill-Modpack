@@ -139,8 +139,8 @@ recipes.addShaped(<betterwithmods:saw>, [[<primal:vanadium_ingot>, <primal:vanad
 recipes.addShaped(<betterwithmods:saw>, [[<primal:vanadium_ingot>, <primal:vanadium_ingot>, <primal:vanadium_ingot>], [<ore:gearWood>, <betterwithmods:material:9>, <ore:gearWood>], [<betterwithmods:wood_siding:*>, <ore:gearWood>, <betterwithmods:wood_siding:*>]]);
 mods.betterwithmods.Cauldron.add(<minecraft:ice>, <minecraft:bucket>, [<toughasnails:ice_cube>, <minecraft:water_bucket>]);
 mods.betterwithmods.Cauldron.add(<minecraft:water_bucket>, null, [<minecraft:bucket>, <minecraft:ice>]);
-
-
+mods.betterwithmods.StokedCrucible.remove(<minecraft:iron_ingot> * 3);
+mods.betterwithmods.Cauldron.add(<toughasnails:jelled_slime>, null, [<toughasnails:ice_cube> * 5, <minecraft:slime_ball>, <betterwithmods:material:1>]);
 
 
 
@@ -171,7 +171,7 @@ recipes.addShapeless(<primal:iron_ring> * 6, [<primal:quartz_gallagher>, <ore:pl
 recipes.remove(<primal:nether_cloth>);
 <primal:nether_cloth>.displayName = "Rush Seed Flour";
 recipes.addShapeless(<primal:nether_cloth>, [<primal:rush_seeds>, <primal:rush_seeds>, <primal:rush_seeds>, <primal:rush_seeds>, <primal:rush_seeds>, <primal:rush_seeds>, <primal:rush_seeds>, <primal:rush_seeds>, <primal:rush_seeds>]);
-recipes.addShapeless(<primal:wheat_ground>, [<primal:nether_cloth>, <primal:nether_cloth>, <primal:nether_cloth>, <ore:foodSalt>]);
+recipes.addShapeless(<primal:wheat_ground> * 4, [<primal:nether_cloth>, <primal:nether_cloth>, <primal:nether_cloth>, <ore:foodSalt>]);
 recipes.addShaped(<minecraft:bucket>, [[<primal:iron_sheet>, null, <primal:iron_sheet>], [<primal:iron_sheet>, null, <primal:iron_sheet>], [<primal:iron_sheet>, <primal:iron_sheet>, <primal:iron_sheet>]]);
 recipes.remove(<primal:carbonate_flag>);
 recipes.remove(<primal:carbonate_ferro_flag>);
@@ -255,6 +255,24 @@ mods.betterwithmods.StokedCrucible.add(<embers:ingotSilver>, <primal:carbonate_s
 mods.betterwithmods.StokedCrucible.add(<embers:ingotLead>, <primal:carbonate_slack> * 3, [<primal:lead_ingot>]);
 
 
+
+# ==============================================
+# roots ballence
+# ==============================================
+
+
+<primal:carbonate_flag>.displayName = "Purifyed Magical Rock";
+
+recipes.remove(<roots:runeStone>);
+recipes.addShaped(<roots:runeStone>, [[<ore:dyeBlue>, <primal:carbonate_flag>], [<primal:carbonate_flag>, <ore:dyeBlue>]]);
+recipes.remove(<roots:runedTablet>);
+recipes.remove(<roots:healingPoultice>);
+mods.betterwithmods.StokedCrucible.add(<primal:carbonate_flag>, <betterwithmods:urn:0>, [<betterwithmods:urn:8>, <minecraft:stone>, <minecraft:stone>, <adobeblocks:adobe_mixture>, <betterwithmods:material:1>]);
+recipes.remove(<primal:carbonate_flag_stairs>);
+recipes.remove(<primal:carbonate_brick>);
+recipes.addShapeless(<roots:runeStone> * 3, [<roots:runeStoneStairs>, <roots:runeStoneStairs>, <roots:runeStoneStairs>, <roots:runeStoneStairs>]);
+recipes.addShapeless(<roots:runeStone>, [<roots:runeStoneSlabItem>, <roots:runeStoneSlabItem>]);
+recipes.addShaped(<roots:runedTablet>, [[<roots:verdantSprig>, <roots:oldRoot>, <roots:verdantSprig>], [<roots:verdantSprig>, <primal:carbonate_flag>, <roots:verdantSprig>], [<roots:verdantSprig>, <roots:verdantSprig>, <roots:verdantSprig>]]);
 
 
 # ===============================================
