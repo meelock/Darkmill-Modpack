@@ -102,11 +102,7 @@ recipes.addShapeless(<minecraft:ender_eye>, [<minecraft:ender_pearl>, <minecraft
 # ==================================================
 
 
-// Windmill Blade
-recipes.remove(<betterwithmods:material:11>);
-recipes.addShaped(<betterwithmods:material:11>,
-	[[null, hemp_cloth, hemp_cloth],
-	[<ore:slabWood>, <ore:slabWood>, <ore:slabWood>]]);
+
 
 // Hemp Cloth
 recipes.remove(hemp_cloth);

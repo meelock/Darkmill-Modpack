@@ -11,7 +11,7 @@
   "manifestType": "minecraftModpack",
   "manifestVersion": 1,
   "name": "Darkmill",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "meelock_is_awesome",
   "files": [
     {
@@ -52,7 +52,7 @@
     {
       "projectID": 71738,
       "fileID": 2336730,
-      "required": true
+      "required": false
     },
     {
       "projectID": 251121,
@@ -357,6 +357,11 @@
     {
       "projectID": 243121,
       "fileID": 2331721,
+      "required": true
+    },
+    {
+      "projectID": 233151,
+      "fileID": 2312900,
       "required": true
     }
   ],

@@ -72,6 +72,8 @@ mods.betterwithmods.Cauldron.add(<primal:nether_palm_plank>, null, [<primal:neth
 mods.betterwithmods.Cauldron.add(<betterwithmods:material:13>, null, [<primal:lard> * 2]);
 mods.betterwithmods.Cauldron.add(<betterwithmods:material:13>, null, [<primal:suet> * 2]);
 mods.betterwithmods.Cauldron.add(<betterwithmods:material:12>, null, [<primal:horse_meat_cooked>]);
+//awaiting fix
+//mods.betterwithmods.StokedCrucible.add(<minecraft:blazerod>, );
 
 
 
@@ -125,9 +127,16 @@ recipes.addShaped(<primal:quartz_shears>, [[null, <primal:pigiron_nugget>], [<pr
 //bwm tweaks
 recipes.addShapeless(leather_strap * 2, [<betterwithmods:material:33>, <primal:quartz_workblade>]);
 recipes.addShapeless(<betterwithmods:material:33>, [<betterwithmods:material:6>, <primal:quartz_workblade>]);
+recipes.remove(<betterwithmods:material:11>);
+recipes.addShaped(<betterwithmods:material:11>,
+	[[null, hemp_cloth, hemp_cloth],
+	[<ore:slabWood>, <ore:slabWood>, <ore:slabWood>]]);
 recipes.addShaped(<betterwithmods:material:11>, [[<primal:plant_cloth>, <primal:plant_cloth>, <primal:plant_cloth>], [<primal:plant_cloth>, <primal:plant_cloth>, <primal:plant_cloth>], [<ore:slabWood>, <ore:slabWood>, <ore:slabWood>]]);
 recipes.remove(<primal:netherstone>);
 recipes.addShapeless(<primal:netherstone> * 5, [<minecraft:planks:5>, <betterwithmods:material:13>, <minecraft:planks:5>, <minecraft:planks:5>, <minecraft:planks:5>, <minecraft:planks:5>]);
+recipes.addShaped(<betterwithmods:saw>, [[<primal:vanadium_ingot>, <primal:vanadium_ingot>, <primal:vanadium_ingot>], [<ore:gearWood>, <betterwithmods:material:9>, <ore:gearWood>], [<ore:plankWood>, <ore:gearWood>, <ore:plankWood>]]);
+recipes.addShaped(<betterwithmods:saw>, [[<primal:vanadium_ingot>, <primal:vanadium_ingot>, <primal:vanadium_ingot>], [<ore:gearWood>, <betterwithmods:material:9>, <ore:gearWood>], [<betterwithmods:wood_siding:*>, <ore:gearWood>, <betterwithmods:wood_siding:*>]]);
+
 
 
 //primalcore tweaks
@@ -151,6 +160,16 @@ recipes.addShapeless(<primal:torch_wood> * 4, [<primal:silk_cordage_coiled>, <or
 recipes.addShapeless(<primal:torch_wood> * 3, [<ore:stickWood>, <primal:plant_tinder>, <primal:plant_tinder>, <primal:plant_tinder>, <primal:plant_tinder>, <primal:plant_tinder>]);
 
 
+
+# ================================================
+# late game fixes
+# ================================================
+
+recipes.remove(<structuredcrafting:structuredCrafter>);
+recipes.addShapeless(<structuredcrafting:structuredCrafter>, [<minecraft:crafting_table>, <hardcorewither:craftingItem:0>, <hardcorewither:craftingItem:0>, <minecraft:piston>]);
+//awaiting fix in bwm
+//mods.betterwithmods.Couldron.add(<snad:snad:0>, <betterwithmods:urn>, [<minecraft:sand>, <betterwithmods:urn:8>]);
+
 # ================================================
 # misc changes and nitpics
 # ================================================
@@ -160,11 +179,14 @@ recipes.addShaped(<toughasnails:wool_leggings>, [[<primal:plant_cloth>, <primal:
 recipes.remove(<toughasnails:charcoal_filter>);
 recipes.addShapedMirrored(<toughasnails:charcoal_filter> * 3, [[null, <minecraft:paper>, null], [null, <minecraft:coal:1>, null], [null, <minecraft:paper>, null]]);
 recipes.remove(<minecraft:shield>);
+recipes.remove(<toughasnails:jelled_slime>);
+
 
 //recipes.addShaped(<minecraft:lead>
 //recipes.addShaped(<minecraft:bookshelf>
 //recipes.addShaped(<minecraft:tnt>
 //recipes.addShaped(<minecraft:cake>
+//wait for railcraft update.
 //recipes.addShaped(<minecraft:rail>
 //recipes.addShaped(<minecraft:golden_rail>
 //recipes.addShaped(<minecraft:activator_rail>
@@ -196,7 +218,10 @@ recipes.addShapeless(<betterwithmods:material:35>, [<minecraft:redstone>, <prima
 
 
 
-//plant cloth for wind mills. tried, failed
+
+
+
+//plant cloth for wind mills. done.
 //pig iron-iron. done
 //saw using pig iron
 //progression with out iron
