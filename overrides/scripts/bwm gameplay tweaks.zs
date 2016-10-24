@@ -19,7 +19,7 @@ var hemp_fiber = <betterwithmods:material:3>;
 # =================================================
 # bwm + bop
 # =================================================
-
+//this is all writen by hand... also minetweaker recipe thingy just updated so that will change :P
 
 //readd later
 recipes.remove(<biomesoplenty:dull_flower_band>);
@@ -63,7 +63,6 @@ recipes.remove(<primal:nether_palm_plank>);
 
 //add smelting recipes
 mods.betterwithmods.Crucible.add(<minecraft:iron_ingot>, <primal:carbonate_ferro_slack>, [<primal:pigiron_dust> * 3]);
-mods.betterwithmods.Mill.add(<primal:pigiron_dust>, null, [<primal:pigiron_ingot>]);
 mods.betterwithmods.StokedCrucible.add(<minecraft:iron_ingot>, <primal:rock>, [<primal:carbonate_ferro_slack> * 5]);
 furnace.addRecipe(<primal:vanadium_ingot> * 4, <primal:pigiron_dust> * 3, 0.5);
 mods.betterwithmods.Kiln.add(<primal:vanadium_block>, [<minecraft:iron_block>]);
@@ -72,9 +71,15 @@ mods.betterwithmods.Cauldron.add(<primal:nether_palm_plank>, null, [<primal:neth
 mods.betterwithmods.Cauldron.add(<betterwithmods:material:13>, null, [<primal:lard> * 2]);
 mods.betterwithmods.Cauldron.add(<betterwithmods:material:13>, null, [<primal:suet> * 2]);
 mods.betterwithmods.Cauldron.add(<betterwithmods:material:12>, null, [<primal:horse_meat_cooked>]);
-//awaiting fix
-//mods.betterwithmods.StokedCrucible.add(<minecraft:blazerod>, );
+mods.betterwithmods.StokedCrucible.add(<minecraft:blaze_rod>, null, [<primal:golden_stick>, hellfire_dust]);
 
+
+
+//add grinding recipes
+mods.betterwithmods.Mill.add(<primal:pigiron_dust>, null, [<primal:pigiron_ingot>]);
+mods.betterwithmods.Mill.add(<primal:wheat_ground>, null, [<minecraft:wheat>]);
+mods.betterwithmods.Mill.add(<primal:corn_ground>, null, [<primal:corn_seeds>]);
+mods.betterwithmods.Cauldron.add(<primal:corn_seeds>, null, [<primal:corn_cob>]);
 
 
 
@@ -82,10 +87,10 @@ mods.betterwithmods.Cauldron.add(<betterwithmods:material:12>, null, [<primal:ho
 recipes.remove(<betterwithmods:single_machine:3>);
 recipes.addShaped(<betterwithmods:single_machine:3>, [[<primal:iron_sheet>, <minecraft:bone>, <primal:iron_sheet>], [<primal:iron_sheet>, <minecraft:water_bucket>, <primal:iron_sheet>], [<primal:iron_sheet>, <primal:iron_sheet>, <primal:iron_sheet>]]);
 recipes.remove(<primal:iron_sheet>);
-recipes.addShapeless(<primal:iron_sheet>, [<primal:pigiron_ingot>, <primal:stone_gallagher>]);
-recipes.addShapeless(<primal:iron_sheet>, [<primal:pigiron_ingot>, <primal:quartz_gallagher>]);
+recipes.addShapeless(<primal:iron_sheet>, [<primal:pigiron_ingot>, <primal:stone_gallagher:*>]);
+recipes.addShapeless(<primal:iron_sheet>, [<primal:pigiron_ingot>, <primal:quartz_gallagher:*>]);
 recipes.remove(<primal:iron_strands>);
-recipes.addShapeless(<primal:iron_strands>, [<minecraft:iron_ingot>, <primal:iron_clippers>]);
+recipes.addShapeless(<primal:iron_strands>, [<minecraft:iron_ingot>, <primal:iron_clippers:*>]);
 recipes.addShaped(<primal:pigiron_block>, [[<primal:pigiron_ingot>, <primal:pigiron_ingot>, <primal:pigiron_ingot>], [<primal:pigiron_ingot>, <primal:pigiron_ingot>, <primal:pigiron_ingot>], [<primal:pigiron_ingot>, <primal:pigiron_ingot>, <primal:pigiron_ingot>]]);
 recipes.addShapeless(<primal:pigiron_ingot> * 9, [<primal:pigiron_block>]);
 recipes.remove(<primal:carbonate_ferro_stone>);
@@ -125,8 +130,7 @@ recipes.addShaped(<primal:quartz_shears>, [[null, <primal:pigiron_nugget>], [<pr
 
 
 //bwm tweaks
-recipes.addShapeless(leather_strap * 2, [<betterwithmods:material:33>, <primal:quartz_workblade>]);
-recipes.addShapeless(<betterwithmods:material:33>, [<betterwithmods:material:6>, <primal:quartz_workblade>]);
+recipes.addShapeless(<betterwithmods:material:33>, [<betterwithmods:material:6>, <primal:quartz_workblade:*>]);
 recipes.remove(<betterwithmods:material:11>);
 recipes.addShaped(<betterwithmods:material:11>,
 	[[null, hemp_cloth, hemp_cloth],
@@ -158,7 +162,7 @@ recipes.remove(<primal:silk_cordage_coiled>);
 recipes.addShapeless(<primal:silk_cordage_coiled>, [<primal:lard>, <primal:silk_cordage>, <primal:silk_cordage>, <primal:silk_cordage>]);
 recipes.addShapeless(<primal:torch_wood> * 4, [<primal:silk_cordage_coiled>, <ore:stickWood>]);
 recipes.addShapeless(<primal:torch_wood> * 3, [<ore:stickWood>, <primal:plant_tinder>, <primal:plant_tinder>, <primal:plant_tinder>, <primal:plant_tinder>, <primal:plant_tinder>]);
-
+recipes.addShapeless(<primal:golden_stick>, [<minecraft:gold_ingot>, <minecraft:gold_ingot>, <minecraft:gold_ingot>]);
 
 
 # ================================================
@@ -167,8 +171,7 @@ recipes.addShapeless(<primal:torch_wood> * 3, [<ore:stickWood>, <primal:plant_ti
 
 recipes.remove(<structuredcrafting:structuredCrafter>);
 recipes.addShapeless(<structuredcrafting:structuredCrafter>, [<minecraft:crafting_table>, <hardcorewither:craftingItem:0>, <hardcorewither:craftingItem:0>, <minecraft:piston>]);
-//awaiting fix in bwm
-//mods.betterwithmods.Couldron.add(<snad:snad:0>, <betterwithmods:urn>, [<minecraft:sand>, <betterwithmods:urn:8>]);
+mods.betterwithmods.Cauldron.add(<snad:snad:0>, <betterwithmods:urn:0>, [<minecraft:sand>, <betterwithmods:urn:8>]);
 
 # ================================================
 # misc changes and nitpics
