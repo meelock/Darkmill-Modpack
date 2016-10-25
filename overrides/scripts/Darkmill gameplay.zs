@@ -59,8 +59,10 @@ recipes.remove(<primal:nether_palm_plank>);
 
 
 //add smelting recipes
-mods.betterwithmods.Crucible.add(<minecraft:iron_ingot>, <primal:carbonate_ferro_slack>, [<primal:pigiron_dust> * 3]);
-mods.betterwithmods.StokedCrucible.add(<minecraft:iron_ingot>, <primal:rock>, [<primal:carbonate_ferro_slack> * 5]);
+mods.betterwithmods.Crucible.add(<minecraft:iron_ingot>, <primal:carbonate_ferro_slack>,
+		[<primal:pigiron_dust> * 3]);
+mods.betterwithmods.StokedCrucible.add(<minecraft:iron_ingot>, <primal:rock>,
+		[<primal:carbonate_ferro_slack> * 5]);
 furnace.addRecipe(<primal:vanadium_ingot> * 4, <primal:pigiron_dust> * 3, 0.5);
 mods.betterwithmods.Kiln.add(<primal:vanadium_block>, [<minecraft:iron_block>]);
 mods.betterwithmods.StokedCrucible.add(<minecraft:stone>, null, [<primal:rock> * 9]);
@@ -69,7 +71,8 @@ mods.betterwithmods.Cauldron.add(<betterwithmods:material:13>, null, [<primal:la
 mods.betterwithmods.Cauldron.add(<betterwithmods:material:13>, null, [<primal:suet> * 2]);
 mods.betterwithmods.Cauldron.add(<betterwithmods:material:12>, null, [<primal:horse_meat_cooked>]);
 mods.betterwithmods.StokedCrucible.add(<minecraft:blaze_rod>, null, [<primal:golden_stick>, hellfire_dust]);
-mods.betterwithmods.StokedCauldron.add(<minecraft:water_bucket>, null, [<minecraft:bucket>, <biomesoplenty:hard_ice>]);
+mods.betterwithmods.StokedCauldron.add(<minecraft:water_bucket>, null,
+		[<minecraft:bucket>, <biomesoplenty:hard_ice>]);
 
 
 //add grinding recipes
@@ -82,21 +85,36 @@ mods.betterwithmods.Cauldron.add(<primal:corn_seeds>, null, [<primal:corn_cob>])
 
 //fix stuff
 recipes.remove(<betterwithmods:single_machine:3>);
-recipes.addShaped(<betterwithmods:single_machine:3>, [[<primal:iron_sheet>, <minecraft:bone>, <primal:iron_sheet>], [<primal:iron_sheet>, <minecraft:water_bucket>, <primal:iron_sheet>], [<primal:iron_sheet>, <primal:iron_sheet>, <primal:iron_sheet>]]);
+recipes.addShaped(<betterwithmods:single_machine:3>,
+		[[<primal:iron_sheet>, <minecraft:bone>, <primal:iron_sheet>],
+		[<primal:iron_sheet>, <minecraft:water_bucket>, <primal:iron_sheet>],
+		[<primal:iron_sheet>, <primal:iron_sheet>, <primal:iron_sheet>]]);
 recipes.remove(<primal:iron_sheet>);
 recipes.addShapeless(<primal:iron_sheet>, [<primal:pigiron_ingot>, <primal:stone_gallagher:*>]);
 recipes.addShapeless(<primal:iron_sheet>, [<primal:pigiron_ingot>, <primal:quartz_gallagher:*>]);
 recipes.remove(<primal:iron_strands>);
 recipes.addShapeless(<primal:iron_strands>, [<minecraft:iron_ingot>, <primal:iron_clippers:*>]);
-recipes.addShaped(<primal:pigiron_block>, [[<primal:pigiron_ingot>, <primal:pigiron_ingot>, <primal:pigiron_ingot>], [<primal:pigiron_ingot>, <primal:pigiron_ingot>, <primal:pigiron_ingot>], [<primal:pigiron_ingot>, <primal:pigiron_ingot>, <primal:pigiron_ingot>]]);
+recipes.addShaped(<primal:pigiron_block>,
+		[[<primal:pigiron_ingot>, <primal:pigiron_ingot>, <primal:pigiron_ingot>],
+		[<primal:pigiron_ingot>, <primal:pigiron_ingot>, <primal:pigiron_ingot>],
+		[<primal:pigiron_ingot>, <primal:pigiron_ingot>, <primal:pigiron_ingot>]]);
 recipes.addShapeless(<primal:pigiron_ingot> * 9, [<primal:pigiron_block>]);
 recipes.remove(<primal:carbonate_ferro_stone>);
-recipes.addShapeless(<minecraft:cobblestone>, [<primal:rock>, <primal:rock>, <primal:rock>, <primal:rock>, <primal:rock>, <primal:rock>, <primal:rock>, <primal:rock>, <primal:rock>]);
+recipes.addShapeless(<minecraft:cobblestone>,
+		[<primal:rock>, <primal:rock>, <primal:rock>,
+		<primal:rock>, <primal:rock>, <primal:rock>,
+		<primal:rock>, <primal:rock>, <primal:rock>]);
 recipes.remove(<primal:iron_plate>);
 recipes.addShapeless(<primal:iron_plate>, [<primal:quartz_gallagher>, <minecraft:iron_ingot>]);
 recipes.addShapeless(<primal:pigiron_nugget> * 9, [<primal:pigiron_ingot>]);
-recipes.addShapeless(<primal:pigiron_ingot>, [<primal:pigiron_nugget>, <primal:pigiron_nugget>, <primal:pigiron_nugget>, <primal:pigiron_nugget>, <primal:pigiron_nugget>, <primal:pigiron_nugget>, <primal:pigiron_nugget>, <primal:pigiron_nugget>, <primal:pigiron_nugget>]);
-recipes.addShaped(<primal:vanadium_block>, [[<primal:vanadium_ingot>, <primal:vanadium_ingot>, <primal:vanadium_ingot>], [<primal:vanadium_ingot>, <primal:vanadium_ingot>, <primal:vanadium_ingot>], [<primal:vanadium_ingot>, <primal:vanadium_ingot>, <primal:vanadium_ingot>]]);
+recipes.addShapeless(<primal:pigiron_ingot>,
+		[<primal:pigiron_nugget>, <primal:pigiron_nugget>, <primal:pigiron_nugget>,
+		<primal:pigiron_nugget>, <primal:pigiron_nugget>, <primal:pigiron_nugget>,
+		<primal:pigiron_nugget>, <primal:pigiron_nugget>, <primal:pigiron_nugget>]);
+recipes.addShaped(<primal:vanadium_block>,
+		[[<primal:vanadium_ingot>, <primal:vanadium_ingot>, <primal:vanadium_ingot>],
+		[<primal:vanadium_ingot>, <primal:vanadium_ingot>, <primal:vanadium_ingot>],
+		[<primal:vanadium_ingot>, <primal:vanadium_ingot>, <primal:vanadium_ingot>]]);
 
 
 //make quartz tools slag iron tools
@@ -116,31 +134,59 @@ recipes.remove(<primal:quartz_hoe>);
 <primal:quartz_shears>.displayName = "Slag Iron Shears";
 <primal:quartz_shovel>.displayName = "Slag Iron Shovel";
 <primal:quartz_workblade>.displayName = "Slag Iron Workblade";
-recipes.addShaped(<primal:quartz_gallagher>, [[<primal:pigiron_ingot>, <ore:cordageGeneral>, <primal:pigiron_ingot>], [<primal:pigiron_ingot>, <ore:stickWood>, <primal:pigiron_ingot>], [null, <ore:stickWood>, null]]);
-recipes.addShaped(<primal:quartz_workblade>, [[null, <primal:pigiron_nugget>, <primal:pigiron_ingot>], [<primal:pigiron_nugget>, <ore:cordageGeneral>, <primal:pigiron_nugget>], [<ore:stickWood>, <primal:pigiron_nugget>, null]]);
-recipes.addShaped(<primal:quartz_pickaxe>, [[<primal:pigiron_nugget>, <ore:cordageGeneral>, <primal:pigiron_nugget>], [<primal:pigiron_nugget>, <ore:stickWood>, <primal:pigiron_nugget>], [null, <ore:stickWood>, null]]);
-recipes.addShaped(<primal:quartz_axe>, [[<primal:pigiron_nugget>, <ore:cordageGeneral>, <primal:pigiron_nugget>], [<primal:pigiron_nugget>, <ore:stickWood>, null], [null, <ore:stickWood>, null]]);
-recipes.addShaped(<primal:quartz_shovel>, [[null, <primal:pigiron_ingot>, null], [null, <ore:cordageGeneral>, null], [null, <ore:stickWood>, null]]);
-recipes.addShaped(<primal:quartz_hoe>, [[<primal:pigiron_nugget>, <primal:pigiron_nugget>, <ore:cordageGeneral>], [null, <ore:stickWood>, null], [<ore:stickWood>, null, null]]);
-recipes.addShaped(<primal:quartz_hatchet>, [[<primal:pigiron_nugget>, <ore:cordageGeneral>], [null, <ore:stickWood>]]);
-recipes.addShaped(<primal:quartz_shears>, [[null, <primal:pigiron_nugget>], [<primal:pigiron_nugget>, <ore:cordageGeneral>]]);
+recipes.addShaped(<primal:quartz_gallagher>,
+		[[<primal:pigiron_ingot>, <ore:cordageGeneral>, <primal:pigiron_ingot>],
+		[<primal:pigiron_ingot>, <ore:stickWood>, <primal:pigiron_ingot>], [null, <ore:stickWood>, null]]);
+recipes.addShaped(<primal:quartz_workblade>,
+		[[null, <primal:pigiron_nugget>, <primal:pigiron_ingot>],
+		[<primal:pigiron_nugget>, <ore:cordageGeneral>, <primal:pigiron_nugget>],
+		[<ore:stickWood>, <primal:pigiron_nugget>, null]]);
+recipes.addShaped(<primal:quartz_pickaxe>,
+		[[<primal:pigiron_nugget>, <ore:cordageGeneral>, <primal:pigiron_nugget>],
+		[<primal:pigiron_nugget>, <ore:stickWood>, <primal:pigiron_nugget>], [null, <ore:stickWood>, null]]);
+recipes.addShaped(<primal:quartz_axe>,
+		[[<primal:pigiron_nugget>, <ore:cordageGeneral>, <primal:pigiron_nugget>],
+		[<primal:pigiron_nugget>, <ore:stickWood>, null], [null, <ore:stickWood>, null]]);
+recipes.addShaped(<primal:quartz_shovel>,
+		[[null, <primal:pigiron_ingot>, null], [null, <ore:cordageGeneral>, null], [null, <ore:stickWood>, null]]);
+recipes.addShaped(<primal:quartz_hoe>,
+		[[<primal:pigiron_nugget>, <primal:pigiron_nugget>, <ore:cordageGeneral>],
+		[null, <ore:stickWood>, null], [<ore:stickWood>, null, null]]);
+recipes.addShaped(<primal:quartz_hatchet>,
+		[[<primal:pigiron_nugget>, <ore:cordageGeneral>], [null, <ore:stickWood>]]);
+recipes.addShaped(<primal:quartz_shears>,
+		[[null, <primal:pigiron_nugget>], [<primal:pigiron_nugget>, <ore:cordageGeneral>]]);
 
 
 //bwm tweaks
-recipes.addShapeless(<betterwithmods:material:33>, [<betterwithmods:material:6>, <primal:quartz_workblade:*>]);
+recipes.addShapeless(<betterwithmods:material:33>,
+		[<betterwithmods:material:6>, <primal:quartz_workblade:*>]);
 recipes.remove(<betterwithmods:material:11>);
 recipes.addShaped(<betterwithmods:material:11>,
-	[[null, hemp_cloth, hemp_cloth],
-	[<ore:slabWood>, <ore:slabWood>, <ore:slabWood>]]);
-recipes.addShaped(<betterwithmods:material:11>, [[<primal:plant_cloth>, <primal:plant_cloth>, <primal:plant_cloth>], [<primal:plant_cloth>, <primal:plant_cloth>, <primal:plant_cloth>], [<ore:slabWood>, <ore:slabWood>, <ore:slabWood>]]);
+		[[null, hemp_cloth, hemp_cloth],
+		[<ore:slabWood>, <ore:slabWood>, <ore:slabWood>]]);
+recipes.addShaped(<betterwithmods:material:11>,
+		[[<primal:plant_cloth>, <primal:plant_cloth>, <primal:plant_cloth>],
+		[<primal:plant_cloth>, <primal:plant_cloth>, <primal:plant_cloth>],
+		[<ore:slabWood>, <ore:slabWood>, <ore:slabWood>]]);
 recipes.remove(<primal:netherstone>);
-recipes.addShapeless(<primal:netherstone> * 5, [<minecraft:planks:5>, <betterwithmods:material:13>, <minecraft:planks:5>, <minecraft:planks:5>, <minecraft:planks:5>, <minecraft:planks:5>]);
-recipes.addShaped(<betterwithmods:saw>, [[<primal:vanadium_ingot>, <primal:vanadium_ingot>, <primal:vanadium_ingot>], [<ore:gearWood>, <betterwithmods:material:9>, <ore:gearWood>], [<ore:plankWood>, <ore:gearWood>, <ore:plankWood>]]);
-recipes.addShaped(<betterwithmods:saw>, [[<primal:vanadium_ingot>, <primal:vanadium_ingot>, <primal:vanadium_ingot>], [<ore:gearWood>, <betterwithmods:material:9>, <ore:gearWood>], [<betterwithmods:wood_siding:*>, <ore:gearWood>, <betterwithmods:wood_siding:*>]]);
-mods.betterwithmods.Cauldron.add(<minecraft:ice>, <minecraft:bucket>, [<toughasnails:ice_cube>, <minecraft:water_bucket>]);
+recipes.addShapeless(<primal:netherstone> * 5,
+		[<minecraft:planks:5>, <betterwithmods:material:13>, <minecraft:planks:5>,
+		<minecraft:planks:5>, <minecraft:planks:5>, <minecraft:planks:5>]);
+recipes.addShaped(<betterwithmods:saw>,
+		[[<primal:vanadium_ingot>, <primal:vanadium_ingot>, <primal:vanadium_ingot>],
+		[<ore:gearWood>, <betterwithmods:material:9>, <ore:gearWood>],
+		[<ore:plankWood>, <ore:gearWood>, <ore:plankWood>]]);
+recipes.addShaped(<betterwithmods:saw>,
+		[[<primal:vanadium_ingot>, <primal:vanadium_ingot>, <primal:vanadium_ingot>],
+		[<ore:gearWood>, <betterwithmods:material:9>, <ore:gearWood>],
+		[<betterwithmods:wood_siding:*>, <ore:gearWood>, <betterwithmods:wood_siding:*>]]);
+mods.betterwithmods.Cauldron.add(<minecraft:ice>, <minecraft:bucket>,
+		[<toughasnails:ice_cube>, <minecraft:water_bucket>]);
 mods.betterwithmods.Cauldron.add(<minecraft:water_bucket>, null, [<minecraft:bucket>, <minecraft:ice>]);
 mods.betterwithmods.StokedCrucible.remove(<minecraft:iron_ingot> * 3);
-mods.betterwithmods.Cauldron.add(<toughasnails:jelled_slime>, null, [<toughasnails:ice_cube> * 5, <minecraft:slime_ball>, <betterwithmods:material:1>]);
+mods.betterwithmods.Cauldron.add(<toughasnails:jelled_slime>, null,
+		[<toughasnails:ice_cube> * 5, <minecraft:slime_ball>, <betterwithmods:material:1>]);
 
 
 
@@ -159,20 +205,32 @@ recipes.remove(<primal:pressplate_dirt>);
 recipes.remove(<primal:pressplate_grass>);
 recipes.remove(<primal:pressplate_glass>);
 recipes.remove(<primal:silk_cordage_coiled>);
-recipes.addShapeless(<primal:silk_cordage_coiled>, [<primal:lard>, <primal:silk_cordage>, <primal:silk_cordage>, <primal:silk_cordage>]);
+recipes.addShapeless(<primal:silk_cordage_coiled>,
+		[<primal:lard>, <primal:silk_cordage>, <primal:silk_cordage>, <primal:silk_cordage>]);
 recipes.addShapeless(<primal:torch_wood> * 4, [<primal:silk_cordage_coiled>, <ore:stickWood>]);
-recipes.addShapeless(<primal:torch_wood> * 3, [<ore:stickWood>, <primal:plant_tinder>, <primal:plant_tinder>, <primal:plant_tinder>, <primal:plant_tinder>, <primal:plant_tinder>]);
-recipes.addShapeless(<primal:golden_stick>, [<minecraft:gold_ingot>, <minecraft:gold_ingot>, <minecraft:gold_ingot>]);
-mods.betterwithmods.Cauldron.add(<betterwithmods:donut>, null, [<betterwithmods:material:37>, <primal:rush_seeds> * 10]);
+recipes.addShapeless(<primal:torch_wood> * 3,
+		[<ore:stickWood>, <primal:plant_tinder>, <primal:plant_tinder>,
+		<primal:plant_tinder>, <primal:plant_tinder>, <primal:plant_tinder>]);
+recipes.addShapeless(<primal:golden_stick>,
+		[<minecraft:gold_ingot>, <minecraft:gold_ingot>, <minecraft:gold_ingot>]);
+mods.betterwithmods.Cauldron.add(<betterwithmods:donut> * 5, null,
+		[<betterwithmods:material:37>, <primal:rush_seeds> * 10]);
 recipes.remove(<primal:carbonate_stone>);
 recipes.removeShapeless(<minecraft:flint_and_steel>, [<minecraft:iron_ingot>, <minecraft:flint>]);
 recipes.remove(<primal:iron_ring>);
 recipes.addShapeless(<primal:iron_ring> * 6, [<primal:quartz_gallagher>, <ore:plateIron>]);
 recipes.remove(<primal:nether_cloth>);
-<primal:nether_cloth>.displayName = "Rush Seed Flour";
-recipes.addShapeless(<primal:nether_cloth>, [<primal:rush_seeds>, <primal:rush_seeds>, <primal:rush_seeds>, <primal:rush_seeds>, <primal:rush_seeds>, <primal:rush_seeds>, <primal:rush_seeds>, <primal:rush_seeds>, <primal:rush_seeds>]);
-recipes.addShapeless(<primal:wheat_ground> * 4, [<primal:nether_cloth>, <primal:nether_cloth>, <primal:nether_cloth>, <ore:foodSalt>]);
-recipes.addShaped(<minecraft:bucket>, [[<primal:iron_sheet>, null, <primal:iron_sheet>], [<primal:iron_sheet>, null, <primal:iron_sheet>], [<primal:iron_sheet>, <primal:iron_sheet>, <primal:iron_sheet>]]);
+		<primal:nether_cloth>.displayName = "Rush Seed Flour";
+recipes.addShapeless(<primal:nether_cloth>,
+		[<primal:rush_seeds>, <primal:rush_seeds>, <primal:rush_seeds>,
+		<primal:rush_seeds>, <primal:rush_seeds>, <primal:rush_seeds>,
+		<primal:rush_seeds>, <primal:rush_seeds>, <primal:rush_seeds>]);
+recipes.addShapeless(<primal:wheat_ground> * 4,
+		[<primal:nether_cloth>, <primal:nether_cloth>, <primal:nether_cloth>, <ore:foodSalt>]);
+recipes.addShaped(<minecraft:bucket>,
+		[[<primal:iron_sheet>, null, <primal:iron_sheet>],
+		[<primal:iron_sheet>, null, <primal:iron_sheet>],
+		[<primal:iron_sheet>, <primal:iron_sheet>, <primal:iron_sheet>]]);
 recipes.remove(<primal:carbonate_flag>);
 recipes.remove(<primal:carbonate_ferro_flag>);
 
@@ -192,14 +250,19 @@ recipes.remove(<embers:blendCaminite>);
 //hows' this formating?
 recipes.remove(<embers:itemPipe>);
 recipes.addShapedMirrored(<embers:itemPipe> * 4,
-      [[null, <betterwithmods:material:14>, null],
-       [<ore:ingotLead>, <ore:plateLead>, <ore:ingotLead>],
-       [null, <betterwithmods:material:14>, null]]);
+  	[[null, <betterwithmods:material:14>, null],
+    [<ore:ingotLead>, <ore:plateLead>, <ore:ingotLead>],
+		[null, <betterwithmods:material:14>, null]]);
 recipes.remove(<embers:blockFurnace>);
-recipes.addShaped(<embers:blockFurnace>, [[<embers:brickCaminite>, <embers:plateCaminite>, <embers:brickCaminite>],
-                 [<embers:brickCaminite>, <embers:blockCopper>, <embers:brickCaminite>],
-                 [<ore:ingotIron>, <minecraft:furnace:*>, <ore:ingotIron>]]);
-
+recipes.addShaped(<embers:blockFurnace>,
+		[[<embers:brickCaminite>, <embers:plateCaminite>, <embers:brickCaminite>],
+		[<embers:brickCaminite>, <embers:blockCopper>, <embers:brickCaminite>],
+		[<ore:ingotIron>, <minecraft:furnace:*>, <ore:ingotIron>]]);
+recipes.remove(<embers:mechCore>);
+recipes.addShaped(<embers:mechCore>,
+		[[<ore:ingotIron>, <betterwithmods:single_machine:5>, <ore:ingotIron>],
+		[null, <ore:plateLead>, null],
+		[<ore:ingotIron>, null, <ore:ingotIron>]]);
 
 
 
@@ -243,16 +306,37 @@ recipes.addShaped(<embers:blockFurnace>, [[<embers:brickCaminite>, <embers:plate
 mods.betterwithmods.Mill.add(<primal:copper_dust>, <primal:bronze_dust>, [<embers:oreCopper>]);
 mods.betterwithmods.Mill.add(<primal:silver_dust>, <primal:rock>, [<embers:oreSilver>]);
 mods.betterwithmods.Mill.add(<primal:lead_dust>, <primal:rock>, [<embers:oreLead>]);
-mods.betterwithmods.StokedCrucible.add(<primal:bronze_ingot>, <primal:carbonate_slack>, [<primal:copper_dust>]);
-mods.betterwithmods.StokedCauldron.add(<primal:brass_dust>, <primal:carbonate_slack>, [<primal:copper_dust>, <minecraft:ice>]);
-mods.betterwithmods.StokedCrucible.add(<primal:copper_ingot>, <primal:carbonate_slack>, [<primal:brass_dust>]);
-mods.betterwithmods.StokedCrucible.add(<embers:ingotCopper>, <primal:carbonate_slack> * 3, [<primal:bronze_ingot>]);
-mods.betterwithmods.StokedCrucible.add(<embers:ingotCopper> * 3, <primal:carbonate_slack> * 1, [<primal:copper_ingot>]);
-mods.betterwithmods.StokedCrucible.add(<embers:blendCaminite> * 3, null, [<minecraft:clay>, <minecraft:clay>, <minecraft:clay>, <ore:foodSalt>, <primal:carbonate_slack>, <primal:carbonate_slack>, <primal:carbonate_slack>]);
-mods.betterwithmods.StokedCrucible.add(<primal:lead_ingot>, <primal:carbonate_slack>, [<primal:lead_dust>]);
-mods.betterwithmods.StokedCrucible.add(<primal:silver_ingot>, <primal:carbonate_slack>, [<primal:silver_dust>]);
-mods.betterwithmods.StokedCrucible.add(<embers:ingotSilver>, <primal:carbonate_slack> * 3, [<primal:silver_ingot>]);
-mods.betterwithmods.StokedCrucible.add(<embers:ingotLead>, <primal:carbonate_slack> * 3, [<primal:lead_ingot>]);
+mods.betterwithmods.StokedCrucible.add(<primal:bronze_ingot>,
+		<primal:carbonate_slack>,
+		[<primal:copper_dust>]);
+mods.betterwithmods.StokedCauldron.add(<primal:brass_dust>,
+		<primal:carbonate_slack>,
+		[<primal:copper_dust>, <minecraft:ice>]);
+mods.betterwithmods.StokedCrucible.add(<primal:copper_ingot>,
+		<primal:carbonate_slack>,
+		[<primal:brass_dust>]);
+mods.betterwithmods.StokedCrucible.add(<embers:ingotCopper>,
+		<primal:carbonate_slack> * 3,
+		[<primal:bronze_ingot>]);
+mods.betterwithmods.StokedCrucible.add(<embers:ingotCopper> * 3,
+		<primal:carbonate_slack> * 1,
+		[<primal:copper_ingot>]);
+mods.betterwithmods.StokedCrucible.add(<embers:blendCaminite> * 3, null,
+		[<minecraft:clay>, <minecraft:clay>, <minecraft:clay>,
+		<ore:foodSalt>, <primal:carbonate_slack>, <primal:carbonate_slack>,
+		<primal:carbonate_slack>]);
+mods.betterwithmods.StokedCrucible.add(<primal:lead_ingot>,
+		<primal:carbonate_slack>,
+		[<primal:lead_dust>]);
+mods.betterwithmods.StokedCrucible.add(<primal:silver_ingot>,
+		<primal:carbonate_slack>,
+		[<primal:silver_dust>]);
+mods.betterwithmods.StokedCrucible.add(<embers:ingotSilver>,
+		<primal:carbonate_slack> * 3,
+		[<primal:silver_ingot>]);
+mods.betterwithmods.StokedCrucible.add(<embers:ingotLead>,
+		<primal:carbonate_slack> * 3,
+		[<primal:lead_ingot>]);
 
 
 
@@ -262,17 +346,50 @@ mods.betterwithmods.StokedCrucible.add(<embers:ingotLead>, <primal:carbonate_sla
 
 
 <primal:carbonate_flag>.displayName = "Purifyed Magical Rock";
+<primal:carbonate_ferro_flag>.displayName = "Scoured Refined Slag Iron Block";
+<primal:carbonate_brick>.displayName = "Soaked Magical Brick";
+<roots:mortar>.displayName = "Botanical Mortar";
 
 recipes.remove(<roots:runeStone>);
-recipes.addShaped(<roots:runeStone>, [[<ore:dyeBlue>, <primal:carbonate_flag>], [<primal:carbonate_flag>, <ore:dyeBlue>]]);
+recipes.addShaped(<roots:runeStone>,
+		[[<ore:dyeBlue>, <primal:carbonate_flag>],
+		[<primal:carbonate_flag>, <ore:dyeBlue>]]);
 recipes.remove(<roots:runedTablet>);
 recipes.remove(<roots:healingPoultice>);
-mods.betterwithmods.StokedCrucible.add(<primal:carbonate_flag>, <betterwithmods:urn:0>, [<betterwithmods:urn:8>, <minecraft:stone>, <minecraft:stone>, <adobeblocks:adobe_mixture>, <betterwithmods:material:1>]);
+mods.betterwithmods.StokedCrucible.add(<primal:carbonate_flag>, <betterwithmods:urn:0>,
+		[<betterwithmods:urn:8>, <minecraft:stone>, <minecraft:stone>,
+		<adobeblocks:adobe_mixture>, <betterwithmods:material:1>]);
+// remove all the useless recipes.
 recipes.remove(<primal:carbonate_flag_stairs>);
 recipes.remove(<primal:carbonate_brick>);
-recipes.addShapeless(<roots:runeStone> * 3, [<roots:runeStoneStairs>, <roots:runeStoneStairs>, <roots:runeStoneStairs>, <roots:runeStoneStairs>]);
+recipes.remove(<primal:carbonate_ferro_brick>);
+recipes.remove(<primal:carbonate_ferro_flag_stairs>);
+recipes.remove(<primal:carbonate_brick_stairs>);
+recipes.addShapeless(<roots:runeStone> * 3,
+		[<roots:runeStoneStairs>, <roots:runeStoneStairs>, <roots:runeStoneStairs>, <roots:runeStoneStairs>]);
 recipes.addShapeless(<roots:runeStone>, [<roots:runeStoneSlabItem>, <roots:runeStoneSlabItem>]);
-recipes.addShaped(<roots:runedTablet>, [[<roots:verdantSprig>, <roots:oldRoot>, <roots:verdantSprig>], [<roots:verdantSprig>, <primal:carbonate_flag>, <roots:verdantSprig>], [<roots:verdantSprig>, <roots:verdantSprig>, <roots:verdantSprig>]]);
+recipes.addShaped(<roots:runedTablet>,
+		[[<roots:verdantSprig>, <roots:oldRoot>, <roots:verdantSprig>],
+		[<roots:verdantSprig>, <primal:carbonate_flag>, <roots:verdantSprig>],
+		[<roots:verdantSprig>, <roots:verdantSprig>, <roots:verdantSprig>]]);
+recipes.remove(<roots:mortar>);
+recipes.addShaped(<roots:mortar>,
+		[[<primal:carbonate_ferro_flag>, null, <primal:carbonate_ferro_flag>],
+		[<primal:carbonate_ferro_flag>, null, <primal:carbonate_ferro_flag>],
+		[null, <primal:carbonate_ferro_flag>, null]]);
+mods.betterwithmods.Mill.add(<primal:carbonate_ferro_flag>,
+		<primal:vanadium_dust> * 2,
+		[<primal:vanadium_block>]);
+furnace.addRecipe(<primal:vanadium_ingot>, <primal:vanadium_dust>, 0.5);
+mods.betterwithmods.Cauldron.add(<primal:carbonate_brick>, <minecraft:bucket>,
+		[<minecraft:water_bucket>, <minecraft:stonebrick>, <minecraft:dye:1> * 4,
+		<minecraft:dye:11> * 4, <roots:verdantSprig> * 2]);
+recipes.remove(<roots:pestle>);
+recipes.addShaped(<roots:pestle>,
+		[[<primal:carbonate_brick>, null, null],
+		[null, <primal:carbonate_brick>, <primal:carbonate_brick>],
+		[null, <primal:carbonate_brick>, <primal:carbonate_brick>]]);
+
 
 
 # ===============================================
@@ -281,13 +398,18 @@ recipes.addShaped(<roots:runedTablet>, [[<roots:verdantSprig>, <roots:oldRoot>, 
 
 recipes.remove(<charsettweaks:graphite>);
 mods.betterwithmods.StokedCrucible.add(<charsettweaks:graphite>, null, [<primal:ash> * 4]);
-mods.betterwithmods.Cauldron.add(<primal:copper_dust>, <primal:carbonate_slack> * 9, [<primal:bronze_dust>, <minecraft:ice>]);
-mods.betterwithmods.StokedCrucible.add(<primal:pigiron_dust>, <primal:copper_dust> * 2, [<primal:carbonate_slack> * 5, <betterwithmods:material:39> * 3]);
+mods.betterwithmods.Cauldron.add(<primal:copper_dust>, <primal:carbonate_slack> * 9,
+		[<primal:bronze_dust>, <minecraft:ice>]);
+mods.betterwithmods.StokedCrucible.add(<primal:pigiron_dust>, <primal:copper_dust> * 2,
+		[<primal:carbonate_slack> * 5, <betterwithmods:material:39> * 3]);
 recipes.remove(<ceramics:unfired_clay:4>);
-mods.betterwithmods.Crucible.add(<ceramics:unfired_clay:4> * 5, null, [<embers:blendCaminite>, <minecraft:dye:15> * 3]);
+mods.betterwithmods.Crucible.add(<ceramics:unfired_clay:4> * 5, null,
+		[<embers:blendCaminite>, <minecraft:dye:15> * 3]);
 recipes.remove(<adobeblocks:adobe_mixture>);
-mods.betterwithmods.Crucible.add(<adobeblocks:adobe_mixture> * 3, null, [<minecraft:clay_ball>, <minecraft:clay_ball>, <minecraft:clay_ball>, <primal:ash>, <primal:bronze_dust>]);
-mods.betterwithmods.Crucible.add(<primal:terraclay_clump> * 9, null, [<primal:carbonate_slack> * 4, <minecraft:clay>]);
+mods.betterwithmods.Crucible.add(<adobeblocks:adobe_mixture> * 3, null,
+		[<minecraft:clay_ball>, <minecraft:clay_ball>, <minecraft:clay_ball>, <primal:ash>, <primal:bronze_dust>]);
+mods.betterwithmods.Crucible.add(<primal:terraclay_clump> * 9, null,
+		[<primal:carbonate_slack> * 4, <minecraft:clay>]);
 
 
 # ================================================
@@ -295,20 +417,33 @@ mods.betterwithmods.Crucible.add(<primal:terraclay_clump> * 9, null, [<primal:ca
 # ================================================
 
 recipes.remove(<structuredcrafting:structuredCrafter>);
-recipes.addShapeless(<structuredcrafting:structuredCrafter>, [<minecraft:crafting_table>, <hardcorewither:craftingItem:0>, <hardcorewither:craftingItem:0>, <minecraft:piston>]);
-mods.betterwithmods.Cauldron.add(<snad:snad:0>, <betterwithmods:urn:0>, [<minecraft:sand>, <betterwithmods:urn:8>]);
+recipes.addShapeless(<structuredcrafting:structuredCrafter>,
+		[<minecraft:crafting_table>, <hardcorewither:craftingItem:0>, <hardcorewither:craftingItem:0>,
+		<minecraft:piston>]);
+mods.betterwithmods.Cauldron.add(<snad:snad:0>, <betterwithmods:urn:0>,
+		[<minecraft:sand>, <betterwithmods:urn:8>]);
 
 # ================================================
 # misc changes and nitpics
 # ================================================
 
-recipes.addShaped(<toughasnails:wool_chestplate>, [[<primal:plant_cloth>, null, <primal:plant_cloth>], [<primal:plant_cloth>, <primal:plant_cloth>, <primal:plant_cloth>], [<primal:plant_cloth>, <primal:plant_cloth>, <primal:plant_cloth>]]);
-recipes.addShaped(<toughasnails:wool_leggings>, [[<primal:plant_cloth>, <primal:plant_cloth>, <primal:plant_cloth>], [<primal:plant_cloth>, null, <primal:plant_cloth>], [<primal:plant_cloth>, null, <primal:plant_cloth>]]);
+recipes.addShaped(<toughasnails:wool_chestplate>,
+		[[<primal:plant_cloth>, null, <primal:plant_cloth>],
+		[<primal:plant_cloth>, <primal:plant_cloth>, <primal:plant_cloth>],
+		[<primal:plant_cloth>, <primal:plant_cloth>, <primal:plant_cloth>]]);
+recipes.addShaped(<toughasnails:wool_leggings>,
+		[[<primal:plant_cloth>, <primal:plant_cloth>, <primal:plant_cloth>],
+		[<primal:plant_cloth>, null, <primal:plant_cloth>],
+		[<primal:plant_cloth>, null, <primal:plant_cloth>]]);
 recipes.remove(<toughasnails:charcoal_filter>);
-recipes.addShapedMirrored(<toughasnails:charcoal_filter> * 3, [[null, <minecraft:paper>, null], [null, <minecraft:coal:1>, null], [null, <minecraft:paper>, null]]);
+recipes.addShapedMirrored(<toughasnails:charcoal_filter> * 3,
+		[[null, <minecraft:paper>, null],
+		[null, <minecraft:coal:1>, null],
+		[null, <minecraft:paper>, null]]);
 recipes.remove(<minecraft:shield>);
 recipes.remove(<toughasnails:jelled_slime>);
-recipes.addShapeless(<minecraft:flint>, [<minecraft:gravel>, <minecraft:gravel>, <minecraft:gravel>]);
+recipes.addShapeless(<minecraft:flint>,
+		[<minecraft:gravel>, <minecraft:gravel>, <minecraft:gravel>]);
 
 
 //recipes.addShaped(<minecraft:lead>
@@ -322,27 +457,47 @@ recipes.addShapeless(<minecraft:flint>, [<minecraft:gravel>, <minecraft:gravel>,
 //recipes.addShaped(<minecraft:detector_rail>
 //recipes.addShaped(<minecraft:fishing_rod>
 recipes.remove(<minecraft:painting>);
-recipes.addShaped(<minecraft:painting>, [[<betterwithmods:material:38>, <betterwithmods:material:38>, <betterwithmods:material:38>], [<betterwithmods:material:38>, <minecraft:wool:*>, <betterwithmods:material:38>], [<betterwithmods:material:38>, <betterwithmods:material:38>, <betterwithmods:material:38>]]);
+recipes.addShaped(<minecraft:painting>,
+		[[<betterwithmods:material:38>, <betterwithmods:material:38>, <betterwithmods:material:38>],
+		[<betterwithmods:material:38>, <minecraft:wool:*>, <betterwithmods:material:38>],
+		[<betterwithmods:material:38>, <betterwithmods:material:38>, <betterwithmods:material:38>]]);
 //recipes.addShaped(<minecraft:golden_apple>
 recipes.remove(<minecraft:piston>);
-recipes.addShaped(<minecraft:piston>, [[<ore:plankWood>, <ore:plankWood>, <ore:plankWood>], [<ore:cobblestone>, <ore:ingotIron>, <ore:cobblestone>], [<ore:cobblestone>, <betterwithmods:material:35>, <ore:cobblestone>]]);
+recipes.addShaped(<minecraft:piston>,
+		[[<ore:plankWood>, <ore:plankWood>, <ore:plankWood>],
+		[<ore:cobblestone>, <ore:ingotIron>, <ore:cobblestone>],
+		[<ore:cobblestone>, <betterwithmods:material:35>, <ore:cobblestone>]]);
 //recipes.addShaped(<minecraft:enchanting_table>
 //recipes.addShaped(<minecraft:hopper>
 //recipes.addShaped(<charsetpipes:shifter>
 recipes.remove(<spartanshields:shieldBasicWood>);
-recipes.addShaped(<spartanshields:shieldBasicWood>, [[null, <primal:nether_palm_plank>, <primal:nether_palm_plank>], [<primal:nether_palm_plank>, <ore:stickWood>, <primal:nether_palm_plank>], [<primal:nether_palm_plank>, <primal:nether_palm_plank>, null]]);
+recipes.addShaped(<spartanshields:shieldBasicWood>,
+		[[null, <primal:nether_palm_plank>, <primal:nether_palm_plank>],
+		[<primal:nether_palm_plank>, <ore:stickWood>, <primal:nether_palm_plank>],
+		[<primal:nether_palm_plank>, <primal:nether_palm_plank>, null]]);
 recipes.remove(<spartanshields:shieldBasicStone>);
-recipes.addShaped(<spartanshields:shieldBasicStone>, [[null, <primal:pigiron_ingot>, null], [<primal:pigiron_ingot>, <spartanshields:shieldBasicWood>, <primal:pigiron_ingot>], [null, <primal:pigiron_ingot>, null]]);
+recipes.addShaped(<spartanshields:shieldBasicStone>,
+		[[null, <primal:pigiron_ingot>, null],
+		[<primal:pigiron_ingot>, <spartanshields:shieldBasicWood>, <primal:pigiron_ingot>],
+		[null, <primal:pigiron_ingot>, null]]);
 //recipes.addShaped(<spartanshields:shieldBasicIron>
 //recipes.addShaped(<spartanshields:shieldBasicGold>
 recipes.remove(<spartanshields:shieldBasicDiamond>);
-recipes.addShaped(<spartanshields:shieldBasicDiamond>, [[null, <ore:gemDiamond>, null], [<ore:gemDiamond>, <spartanshields:shieldBasicGold>, <ore:gemDiamond>], [null, <ore:gemDiamond>, null]]);
-recipes.addShaped(<toughasnails:wool_helmet>, [[<primal:plant_cloth>, <primal:plant_cloth>, <primal:plant_cloth>], [<primal:plant_cloth>, null, <primal:plant_cloth>]]);
-recipes.addShaped(<toughasnails:wool_boots>, [[<primal:plant_cloth>, null, <primal:plant_cloth>], [<primal:plant_cloth>, null, <primal:plant_cloth>]]);
+recipes.addShaped(<spartanshields:shieldBasicDiamond>,
+		[[null, <ore:gemDiamond>, null],
+		[<ore:gemDiamond>, <spartanshields:shieldBasicGold>, <ore:gemDiamond>],
+		[null, <ore:gemDiamond>, null]]);
+recipes.addShaped(<toughasnails:wool_helmet>,
+		[[<primal:plant_cloth>, <primal:plant_cloth>, <primal:plant_cloth>],
+		[<primal:plant_cloth>, null, <primal:plant_cloth>]]);
+recipes.addShaped(<toughasnails:wool_boots>,
+		[[<primal:plant_cloth>, null, <primal:plant_cloth>],
+		[<primal:plant_cloth>, null, <primal:plant_cloth>]]);
 recipes.remove(<snad:snad:*>);
 // Redstone Latch (remove)
 recipes.remove(<betterwithmods:material:35>);
-recipes.addShapeless(<betterwithmods:material:35>, [<minecraft:redstone>, <primal:iron_sheet>]);
+recipes.addShapeless(<betterwithmods:material:35>,
+		[<minecraft:redstone>, <primal:iron_sheet>]);
 
 
 

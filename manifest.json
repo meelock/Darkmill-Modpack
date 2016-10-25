@@ -3,7 +3,7 @@
     "version": "1.10.2",
     "modLoaders": [
       {
-        "id": "forge-12.18.2.2107",
+        "id": "forge-12.18.2.2112",
         "primary": true
       }
     ]
@@ -11,7 +11,7 @@
   "manifestType": "minecraftModpack",
   "manifestVersion": 1,
   "name": "Darkmill",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "author": "meelock_is_awesome",
   "files": [
     {
@@ -36,7 +36,7 @@
     },
     {
       "projectID": 245211,
-      "fileID": 2337837,
+      "fileID": 2339062,
       "required": true
     },
     {
@@ -141,7 +141,7 @@
     },
     {
       "projectID": 223094,
-      "fileID": 2336695,
+      "fileID": 2338989,
       "required": true
     },
     {
@@ -351,7 +351,7 @@
     },
     {
       "projectID": 243121,
-      "fileID": 2331721,
+      "fileID": 2339129,
       "required": true
     },
     {
