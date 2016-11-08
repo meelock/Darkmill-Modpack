@@ -521,7 +521,9 @@ recipes.remove(<literalascension:gold_carving_tool>);
 recipes.remove(<toughasnails:season_clock>);
 recipes.addShaped(<toughasnails:season_clock>, [[null, <primal:pigiron_ingot>, null], [<primal:pigiron_ingot>, <minecraft:redstone>, <primal:pigiron_ingot>], [null, <primal:pigiron_ingot>, null]]);
 <toughasnails:glowstone_torch>.displayName = "Mystical Glowstone Torch";
-recipes.addShapeless(<toughasnails:glowstone_torch>, [<betterwithmods:material:17>, <betterwithmods:material:17>, <betterwithmods:material:17>, <betterwithmods:material:17>, <primal:torch_wood>, <minecraft:glowstone_dust>]);
+recipes.addShapeless(<toughasnails:glowstone_torch>,
+    [<betterwithmods:material:17>, <betterwithmods:material:17>, <betterwithmods:material:17>,
+    <betterwithmods:material:17>, <primal:torch_wood>, <minecraft:glowstone_dust>]);
 
 
 # ===============================================
@@ -529,8 +531,42 @@ recipes.addShapeless(<toughasnails:glowstone_torch>, [<betterwithmods:material:1
 # ===============================================
 
 recipes.remove(<spiceoflife:lunchbox>);
-recipes.addShapedMirrored(<spiceoflife:lunchbox>, [[<primal:pigiron_ingot>, null, <primal:pigiron_ingot>], [null, <primal:pigiron_ingot>, null]]);
+recipes.addShapedMirrored(<spiceoflife:lunchbox>,
+    [[<primal:pigiron_ingot>, null, <primal:pigiron_ingot>],
+    [null, <primal:pigiron_ingot>, null]]);
 
+
+# ===============================================
+# "antique atlas" tweaks
+# ===============================================
+
+recipes.remove(<antiqueatlas:emptyAntiqueAtlas>);
+recipes.addShaped(<antiqueatlas:emptyAntiqueAtlas>,
+    [[<minecraft:map>, <minecraft:map>, <minecraft:map>],
+    [<minecraft:map>, <minecraft:book>, <minecraft:map>],
+    [<minecraft:map>, <minecraft:map>, <minecraft:map>]]);
+
+
+
+# ================================================
+# "modular routers" tweaks
+# ================================================
+
+recipes.remove(<modularrouters:blankModule>);
+recipes.remove(<modularrouters:itemRouter>);
+recipes.remove(<modularrouters:blankUpgrade>);
+recipes.addShaped(<modularrouters:blankModule>,
+    [[<betterwithmods:material:14>, <betterwithmods:material:17>, <betterwithmods:material:14>],
+    [<betterwithmods:material:14>, <minecraft:redstone_block>, <betterwithmods:material:14>],
+    [<betterwithmods:material:14>, <betterwithmods:material:14>, <betterwithmods:material:14>]]);
+recipes.addShaped(<modularrouters:itemRouter>,
+    [[<betterwithmods:aesthetic:2>, <minecraft:piston>, <betterwithmods:aesthetic:2>],
+    [<betterwithmods:aesthetic:2>, <minecraft:beacon>, <betterwithmods:aesthetic:2>],
+    [<betterwithmods:aesthetic:2>, <modularrouters:blankModule>, <betterwithmods:aesthetic:2>]]);
+recipes.addShaped(<modularrouters:blankUpgrade>,
+    [[<betterwithmods:material:14>, <minecraft:gold_ingot>, <betterwithmods:material:14>],
+    [<betterwithmods:material:14>, <modularrouters:blankModule>, <betterwithmods:material:14>],
+    [<betterwithmods:material:14>, <minecraft:gold_ingot>, <betterwithmods:material:14>]]);
 
 
 
