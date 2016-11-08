@@ -73,6 +73,10 @@ mods.betterwithmods.Cauldron.add(<betterwithmods:material:12>, null, [<primal:ho
 mods.betterwithmods.StokedCrucible.add(<minecraft:blaze_rod>, null, [<primal:golden_stick>, hellfire_dust]);
 mods.betterwithmods.StokedCauldron.add(<minecraft:water_bucket>, null,
 		[<minecraft:bucket>, <biomesoplenty:hard_ice>]);
+furnace.addRecipe(<minecraft:iron_ingot>, <primal:vanadium_dust> * 9, 0.5);
+
+
+
 
 
 //add grinding recipes
@@ -80,7 +84,12 @@ mods.betterwithmods.Mill.add(<primal:pigiron_dust>, null, [<primal:pigiron_ingot
 mods.betterwithmods.Mill.add(<primal:wheat_ground>, null, [<minecraft:wheat>]);
 mods.betterwithmods.Mill.add(<primal:corn_ground>, null, [<primal:corn_seeds>]);
 mods.betterwithmods.Cauldron.add(<primal:corn_seeds>, null, [<primal:corn_cob>]);
-
+mods.betterwithmods.Mill.add(<primal:vanadium_dust>, null, [<primal:vanadium_ingot>]);
+mods.betterwithmods.Mill.add(<primal:rock> * 4, null, [<minecraft:stone:1>]);
+mods.betterwithmods.Mill.add(<primal:rock> * 4, null, [<minecraft:stone:3>]);
+mods.betterwithmods.Mill.add(<primal:rock> * 4, null,[<minecraft:stone:5>]);
+mods.betterwithmods.Mill.add(<primal:nether_cloth> * 4, null, [<primal:rush_seeds> * 8]);
+mods.betterwithmods.Mill.add(<primal:wheat_ground> * 3, null, [<primal:nether_cloth> * 2]);
 
 
 //fix stuff
@@ -182,11 +191,13 @@ recipes.addShaped(<betterwithmods:saw>,
 		[<ore:gearWood>, <betterwithmods:material:9>, <ore:gearWood>],
 		[<betterwithmods:wood_siding:*>, <ore:gearWood>, <betterwithmods:wood_siding:*>]]);
 mods.betterwithmods.Cauldron.add(<minecraft:ice>, <minecraft:bucket>,
-		[<toughasnails:ice_cube>, <minecraft:water_bucket>]);
+		[<toughasnails:ice_cube> * 4, <minecraft:water_bucket>]);
 mods.betterwithmods.Cauldron.add(<minecraft:water_bucket>, null, [<minecraft:bucket>, <minecraft:ice>]);
 mods.betterwithmods.StokedCrucible.remove(<minecraft:iron_ingot> * 3);
 mods.betterwithmods.Cauldron.add(<toughasnails:jelled_slime>, null,
 		[<toughasnails:ice_cube> * 5, <minecraft:slime_ball>, <betterwithmods:material:1>]);
+mods.betterwithmods.Crucible.add(<minecraft:redstone> * 63, null, [<betterwithmods:material:17> * 4, <minecraft:glowstone> * 7]);
+
 
 
 
@@ -233,6 +244,8 @@ recipes.addShaped(<minecraft:bucket>,
 		[<primal:iron_sheet>, <primal:iron_sheet>, <primal:iron_sheet>]]);
 recipes.remove(<primal:carbonate_flag>);
 recipes.remove(<primal:carbonate_ferro_flag>);
+mods.betterwithmods.Cauldron.add(<primal:rush_seeds> * 5, null, [<primal:rush_tips_bloom> * 4]);
+
 
 
 
@@ -263,7 +276,12 @@ recipes.addShaped(<embers:mechCore>,
 		[[<ore:ingotIron>, <betterwithmods:single_machine:5>, <ore:ingotIron>],
 		[null, <ore:plateLead>, null],
 		[<ore:ingotIron>, null, <ore:ingotIron>]]);
-
+mods.betterwithmods.StokedCauldron.add(<primal:salt_netjry_dust> * 2,
+    <minecraft:bucket> * 5, [<minecraft:water_bucket> * 5]);
+recipes.remove(<embers:axeClockwork>);
+recipes.remove(<embers:pickaxeClockwork>);
+recipes.remove(<embers:staffEmber>);
+recipes.remove(<embers:grandhammer>);
 
 
 # ================================================
@@ -282,6 +300,7 @@ recipes.addShaped(<embers:mechCore>,
 <ore:ingotZinc>.remove(<primal:zinc_ingot>);
 <ore:dustCopper>.remove(<primal:copper_dust>);
 <ore:dustBronze>.remove(<primal:bronze_dust>);
+<ore:dyeBlack>.add(<embers:dustAsh>);
 
 
 # ================================================
@@ -412,6 +431,109 @@ mods.betterwithmods.Crucible.add(<primal:terraclay_clump> * 9, null,
 		[<primal:carbonate_slack> * 4, <minecraft:clay>]);
 
 
+# ===============================================
+# XL food mod tweaks
+# ===============================================
+
+recipes.remove(<xlfoodmod:empty_can>);
+recipes.remove(<xlfoodmod:speedy_energy_drink>);
+recipes.remove(<xlfoodmod:healthy_energy_drink>);
+recipes.remove(<xlfoodmod:stealthy_energy_drink>);
+recipes.remove(<xlfoodmod:strong_energy_drink>);
+recipes.remove(<xlfoodmod:deadly_energy_drink>);
+recipes.remove(<xlfoodmod:super_energy_drink>);
+recipes.remove(<xlfoodmod:glass_mug>);
+recipes.remove(<xlfoodmod:beer>);
+recipes.remove(<xlfoodmod:coffee_cup>);
+recipes.remove(<xlfoodmod:coffee>);
+recipes.remove(<xlfoodmod:cheese>);
+recipes.remove(<xlfoodmod:dough>);
+recipes.remove(<xlfoodmod:butter>);
+recipes.remove(<xlfoodmod:chips>);
+
+
+# ===============================================
+# "Better Questing" Tweaks
+# ===============================================
+
+recipes.remove(<bqt:bqt>);
+recipes.remove(<betterquesting:submit_station>);
+
+
+# ===============================================
+# "mo' Creatures" tweaks (mocreatures isnt working)
+# ===============================================
+
+//<ore:plankWood>.add(<mocreatures:MoCWoodPlank:*>);
+//<ore:dirt>.add(<mocreatures:MoCStone:*>);
+//<ore:grass>.add(<mocreatures:MoCGrass:*>);
+//<ore:treeWood>.add(<mocreatures:MoCLog:*>);
+//<ore:stone>.add(<mocreatures:MoCStone:*>);
+
+
+
+# ================================================
+# "Vanilla Automation" tweaks
+# ================================================
+
+recipes.remove(<va:blockplacer>);
+recipes.remove(<va:xphopper>);
+recipes.remove(<va:filteredhopper>);
+recipes.remove(<va:redstoneclock>);
+recipes.addShapeless(<va:blockplacer>, [<betterwithmods:urn:8>, <minecraft:dispenser>, <va:pokestick>]);
+recipes.addShapeless(<va:filteredhopper>, [<minecraft:hopper>, <betterwithmods:single_machine:4>, <betterwithmods:urn:8>]);
+recipes.addShapeless(<va:redstoneclock>, [<minecraft:comparator>, <minecraft:redstone_torch>, <minecraft:repeater>]);
+
+# ===============================================
+# "storage drawers" tweaks
+# ===============================================
+
+recipes.remove(<storagedrawers:customDrawers>);
+recipes.remove(<storagedrawers:customTrim>);
+
+
+
+
+# ===============================================
+# "Chisels & Bits" tweaks
+# ===============================================
+
+recipes.remove(<chiselsandbits:chisel_diamond>);
+recipes.remove(<chiselsandbits:chisel_stone>);
+recipes.remove(<chiselsandbits:chisel_iron>);
+recipes.remove(<chiselsandbits:chisel_gold>);
+recipes.addShapedMirrored(<chiselsandbits:chisel_diamond>, [[<minecraft:diamond>], [<betterwithmods:material:38>]]);
+
+
+# ===============================================
+# "literal ascension" tweaks
+# ===============================================
+
+recipes.remove(<literalascension:wood_carving_tool>);
+recipes.remove(<literalascension:stone_carving_tool>);
+recipes.remove(<literalascension:gold_carving_tool>);
+
+
+# ===============================================
+# "toughasnails" tweaks
+# ===============================================
+
+recipes.remove(<toughasnails:season_clock>);
+recipes.addShaped(<toughasnails:season_clock>, [[null, <primal:pigiron_ingot>, null], [<primal:pigiron_ingot>, <minecraft:redstone>, <primal:pigiron_ingot>], [null, <primal:pigiron_ingot>, null]]);
+<toughasnails:glowstone_torch>.displayName = "Mystical Glowstone Torch";
+recipes.addShapeless(<toughasnails:glowstone_torch>, [<betterwithmods:material:17>, <betterwithmods:material:17>, <betterwithmods:material:17>, <betterwithmods:material:17>, <primal:torch_wood>, <minecraft:glowstone_dust>]);
+
+
+# ===============================================
+# "spice of life" tweaks
+# ===============================================
+
+recipes.remove(<spiceoflife:lunchbox>);
+recipes.addShapedMirrored(<spiceoflife:lunchbox>, [[<primal:pigiron_ingot>, null, <primal:pigiron_ingot>], [null, <primal:pigiron_ingot>, null]]);
+
+
+
+
 # ================================================
 # late game fixes
 # ================================================
@@ -522,4 +644,4 @@ recipes.addShapeless(<betterwithmods:material:35>,
 //quartz tools now pig iron tools. done
 //remove dirt, grass and glass pressure plates. done.
 //remove iron strand recipe. done
-//make unfired proclin require a cauldron
+//make unfired proclin require a cauldron. done
