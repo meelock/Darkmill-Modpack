@@ -50,32 +50,9 @@ for i, armor_set in armor_items {
 		[[material, null, material],
 		[material, leather_strap, material]]);
 }
-// Diamond Tools
-recipes.remove(<minecraft:diamond_sword>);
-recipes.remove(<minecraft:diamond_shovel>);
-recipes.remove(<minecraft:diamond_pickaxe>);
-recipes.remove(<minecraft:diamond_axe>);
-recipes.remove(<minecraft:diamond_hoe>);
-recipes.addShapedMirrored(<minecraft:diamond_sword>,
-		[[null, diamond, null],
-		[leather_strap, diamond, leather_strap],
-		[null, stick, null]]);
-recipes.addShapedMirrored(<minecraft:diamond_shovel>,
-		[[null, diamond, null],
-		[leather_strap, stick, leather_strap],
-		[null, stick, null]]);
-recipes.addShapedMirrored(<minecraft:diamond_pickaxe>,
-		[[diamond, diamond, diamond],
-		[leather_strap, stick, leather_strap],
-		[null, stick, null]]);
-recipes.addShapedMirrored(<minecraft:diamond_axe>,
-		[[diamond, diamond, leather_strap],
-		[diamond, stick, leather_strap],
-		[null, stick, null]]);
-recipes.addShapedMirrored(<minecraft:diamond_hoe>,
-		[[diamond, diamond, null],
-		[leather_strap, stick, leather_strap],
-		[null, stick, null]]);
+
+
+
 // Eye of Ender
 recipes.remove(<minecraft:ender_eye>);
 recipes.addShapeless(<minecraft:ender_eye>, [<minecraft:ender_pearl>, <minecraft:blaze_powder>, hellfire_dust]);

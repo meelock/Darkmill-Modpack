@@ -11,7 +11,7 @@
   "manifestType": "minecraftModpack",
   "manifestVersion": 1,
   "name": "Darkmill",
-  "version": "0.0.11b",
+  "version": "0.0.12",
   "author": "meelock_is_awesome",
   "files": [
     {
@@ -31,12 +31,12 @@
     },
     {
       "projectID": 237407,
-      "fileID": 2334286,
+      "fileID": 2344086,
       "required": true
     },
     {
       "projectID": 245211,
-      "fileID": 2341217,
+      "fileID": 2343881,
       "required": true
     },
     {
@@ -61,12 +61,12 @@
     },
     {
       "projectID": 244830,
-      "fileID": 2330522,
+      "fileID": 2344008,
       "required": true
     },
     {
       "projectID": 250294,
-      "fileID": 2342662,
+      "fileID": 2343332,
       "required": true
     },
     {
@@ -86,7 +86,7 @@
     },
     {
       "projectID": 238222,
-      "fileID": 2342621,
+      "fileID": 2344117,
       "required": true
     },
     {
@@ -181,7 +181,7 @@
     },
     {
       "projectID": 223852,
-      "fileID": 2342349,
+      "fileID": 2344110,
       "required": true
     },
     {
@@ -216,7 +216,7 @@
     },
     {
       "projectID": 236104,
-      "fileID": 2330343,
+      "fileID": 2343268,
       "required": true
     },
     {
@@ -231,7 +231,7 @@
     },
     {
       "projectID": 220318,
-      "fileID": 2341507,
+      "fileID": 2343023,
       "required": true
     },
     {
@@ -296,7 +296,7 @@
     },
     {
       "projectID": 225658,
-      "fileID": 2339850,
+      "fileID": 2343196,
       "required": true
     },
     {
@@ -306,7 +306,7 @@
     },
     {
       "projectID": 240630,
-      "fileID": 2342690,
+      "fileID": 2344252,
       "required": true
     },
     {
@@ -346,12 +346,12 @@
     },
     {
       "projectID": 228525,
-      "fileID": 2341606,
+      "fileID": 2343098,
       "required": true
     },
     {
       "projectID": 226294,
-      "fileID": 2338559,
+      "fileID": 2344049,
       "required": true
     },
     {
@@ -436,7 +436,7 @@
     },
     {
       "projectID": 227083,
-      "fileID": 2341549,
+      "fileID": 2343318,
       "required": true
     },
     {
@@ -487,6 +487,11 @@
     {
       "projectID": 227795,
       "fileID": 2338328,
+      "required": true
+    },
+    {
+      "projectID": 244975,
+      "fileID": 2342641,
       "required": true
     }
   ],

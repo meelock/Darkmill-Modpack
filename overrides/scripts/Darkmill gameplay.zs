@@ -12,6 +12,12 @@ var tanned_leather = <betterwithmods:material:6>;
 var hemp_cloth = <betterwithmods:material:4>;
 var hemp_fiber = <betterwithmods:material:3>;
 
+//PlastiTech
+var diamantine_ingot = <plastitech:ItemDiamantine_ingot>;
+
+//Vanilla
+var stick = <minecraft:stick>;
+
 
 # =================================================
 # bop
@@ -31,18 +37,12 @@ recipes.remove(<biomesoplenty:enderporter>);
 # ================================================
 //remove iron from iron ore, and make iron ore smelt into pig iron
 furnace.remove(<minecraft:iron_ingot>, <minecraft:iron_ore>);
-furnace.addRecipe(<primal:pigiron_ingot>, <minecraft:iron_ore>, 0.5);
+furnace.addRecipe(<plastitech:ItemSlag_iron_ingot>, <minecraft:iron_ore>, 0.5);
 
 //rename all the things
-<primal:pigiron_dust>.displayName = "Slag Iron Dust";
-<primal:pigiron_ingot>.displayName = "Slag Iron Ingot";
-<primal:pigiron_nugget>.displayName = "Slag Iron Nugget";
 <primal:pigiron_block>.displayName = "Slag Iron Block";
 <primal:carbonate_ferro_slack>.displayName = "Slag";
 <primal:iron_sheet>.displayName = "Slag Iron Sheet";
-<primal:vanadium_ingot>.displayName = "Refined Slag Iron Ingot";
-<primal:vanadium_dust>.displayName = "Refined Slag Iron Dust";
-<primal:vanadium_nugget>.displayName = "Refined Slag Iron Nugget";
 <primal:vanadium_block>.displayName = "Refined Slag Iron Block";
 <primal:nether_palm_plank>.displayName = "Hardend Dark Oak";
 <primal:netherstone>.displayName = "Waxed Dark Oak";
@@ -59,11 +59,14 @@ recipes.remove(<primal:nether_palm_plank>);
 
 
 //add smelting recipes
-mods.betterwithmods.Crucible.add(<minecraft:iron_ingot>, <primal:carbonate_ferro_slack>,
-		[<primal:pigiron_dust> * 3]);
-mods.betterwithmods.StokedCrucible.add(<minecraft:iron_ingot>, <primal:rock>,
+mods.betterwithmods.Cauldron.add(<embers:nuggetIron> * 3, <primal:carbonate_ferro_slack> * 5,
+		[<plastitech:ItemSlag_iron_dust> * 3]);
+mods.betterwithmods.Crucible.add(<minecraft:iron_ingot>, <primal:carbonate_ferro_slack> * 3,
+    [<plastitech:ItemSmelted_iron_dust> * 5]);
+mods.betterwithmods.StokedCrucible.add(<minecraft:iron_ingot>, <primal:carbonate_ferro_slack> * 2, [<plastitech:ItemSmelted_iron_dust> * 2, hellfire_dust]);
+mods.betterwithmods.StokedCrucible.add(<embers:nuggetIron> * 3, <primal:rock>,
 		[<primal:carbonate_ferro_slack> * 5]);
-furnace.addRecipe(<primal:vanadium_ingot> * 4, <primal:pigiron_dust> * 3, 0.5);
+furnace.addRecipe(<plastitech:ItemSmelted_iron_ingot> * 4, <plastitech:ItemSlag_iron_dust> * 3, 0.5);
 mods.betterwithmods.Kiln.add(<primal:vanadium_block>, [<minecraft:iron_block>]);
 mods.betterwithmods.StokedCrucible.add(<minecraft:stone>, null, [<primal:rock> * 9]);
 mods.betterwithmods.Cauldron.add(<primal:nether_palm_plank>, null, [<primal:netherstone>]);
@@ -73,18 +76,18 @@ mods.betterwithmods.Cauldron.add(<betterwithmods:material:12>, null, [<primal:ho
 mods.betterwithmods.StokedCrucible.add(<minecraft:blaze_rod>, null, [<primal:golden_stick>, hellfire_dust]);
 mods.betterwithmods.StokedCauldron.add(<minecraft:water_bucket>, null,
 		[<minecraft:bucket>, <biomesoplenty:hard_ice>]);
-furnace.addRecipe(<minecraft:iron_ingot>, <primal:vanadium_dust> * 9, 0.5);
+furnace.addRecipe(<embers:nuggetIron> * 5, <plastitech:ItemSmelted_iron_dust> * 15, 0.5);
 
 
 
 
 
 //add grinding recipes
-mods.betterwithmods.Mill.add(<primal:pigiron_dust>, null, [<primal:pigiron_ingot>]);
+mods.betterwithmods.Mill.add(<plastitech:ItemSlag_iron_dust>, null, [<plastitech:ItemSlag_iron_ingot>]);
 mods.betterwithmods.Mill.add(<primal:wheat_ground>, null, [<minecraft:wheat>]);
 mods.betterwithmods.Mill.add(<primal:corn_ground>, null, [<primal:corn_seeds>]);
 mods.betterwithmods.Cauldron.add(<primal:corn_seeds>, null, [<primal:corn_cob>]);
-mods.betterwithmods.Mill.add(<primal:vanadium_dust>, null, [<primal:vanadium_ingot>]);
+mods.betterwithmods.Mill.add(<plastitech:ItemSmelted_iron_dust>, null, [<plastitech:ItemSmelted_iron_ingot>]);
 mods.betterwithmods.Mill.add(<primal:rock> * 4, null, [<minecraft:stone:1>]);
 mods.betterwithmods.Mill.add(<primal:rock> * 4, null, [<minecraft:stone:3>]);
 mods.betterwithmods.Mill.add(<primal:rock> * 4, null,[<minecraft:stone:5>]);
@@ -99,15 +102,15 @@ recipes.addShaped(<betterwithmods:single_machine:3>,
 		[<primal:iron_sheet>, <minecraft:water_bucket>, <primal:iron_sheet>],
 		[<primal:iron_sheet>, <primal:iron_sheet>, <primal:iron_sheet>]]);
 recipes.remove(<primal:iron_sheet>);
-recipes.addShapeless(<primal:iron_sheet>, [<primal:pigiron_ingot>, <primal:stone_gallagher:*>]);
-recipes.addShapeless(<primal:iron_sheet>, [<primal:pigiron_ingot>, <primal:quartz_gallagher:*>]);
+recipes.addShapeless(<primal:iron_sheet>, [<plastitech:ItemSlag_iron_ingot>, <primal:stone_gallagher:*>]);
+recipes.addShapeless(<primal:iron_sheet>, [<plastitech:ItemSlag_iron_ingot>, <primal:quartz_gallagher:*>]);
 recipes.remove(<primal:iron_strands>);
 recipes.addShapeless(<primal:iron_strands>, [<minecraft:iron_ingot>, <primal:iron_clippers:*>]);
 recipes.addShaped(<primal:pigiron_block>,
-		[[<primal:pigiron_ingot>, <primal:pigiron_ingot>, <primal:pigiron_ingot>],
-		[<primal:pigiron_ingot>, <primal:pigiron_ingot>, <primal:pigiron_ingot>],
-		[<primal:pigiron_ingot>, <primal:pigiron_ingot>, <primal:pigiron_ingot>]]);
-recipes.addShapeless(<primal:pigiron_ingot> * 9, [<primal:pigiron_block>]);
+		[[<plastitech:ItemSlag_iron_ingot>, <plastitech:ItemSlag_iron_ingot>, <plastitech:ItemSlag_iron_ingot>],
+		[<plastitech:ItemSlag_iron_ingot>, <plastitech:ItemSlag_iron_ingot>, <plastitech:ItemSlag_iron_ingot>],
+		[<plastitech:ItemSlag_iron_ingot>, <plastitech:ItemSlag_iron_ingot>, <plastitech:ItemSlag_iron_ingot>]]);
+recipes.addShapeless(<plastitech:ItemSlag_iron_ingot> * 9, [<primal:pigiron_block>]);
 recipes.remove(<primal:carbonate_ferro_stone>);
 recipes.addShapeless(<minecraft:cobblestone>,
 		[<primal:rock>, <primal:rock>, <primal:rock>,
@@ -115,15 +118,15 @@ recipes.addShapeless(<minecraft:cobblestone>,
 		<primal:rock>, <primal:rock>, <primal:rock>]);
 recipes.remove(<primal:iron_plate>);
 recipes.addShapeless(<primal:iron_plate>, [<primal:quartz_gallagher>, <minecraft:iron_ingot>]);
-recipes.addShapeless(<primal:pigiron_nugget> * 9, [<primal:pigiron_ingot>]);
-recipes.addShapeless(<primal:pigiron_ingot>,
-		[<primal:pigiron_nugget>, <primal:pigiron_nugget>, <primal:pigiron_nugget>,
-		<primal:pigiron_nugget>, <primal:pigiron_nugget>, <primal:pigiron_nugget>,
-		<primal:pigiron_nugget>, <primal:pigiron_nugget>, <primal:pigiron_nugget>]);
+recipes.addShapeless(<plastitech:ItemSlag_iron_nugget> * 9, [<plastitech:ItemSlag_iron_ingot>]);
+recipes.addShapeless(<plastitech:ItemSlag_iron_ingot>,
+		[<plastitech:ItemSlag_iron_nugget>, <plastitech:ItemSlag_iron_nugget>, <plastitech:ItemSlag_iron_nugget>,
+		<plastitech:ItemSlag_iron_nugget>, <plastitech:ItemSlag_iron_nugget>, <plastitech:ItemSlag_iron_nugget>,
+		<plastitech:ItemSlag_iron_nugget>, <plastitech:ItemSlag_iron_nugget>, <plastitech:ItemSlag_iron_nugget>]);
 recipes.addShaped(<primal:vanadium_block>,
-		[[<primal:vanadium_ingot>, <primal:vanadium_ingot>, <primal:vanadium_ingot>],
-		[<primal:vanadium_ingot>, <primal:vanadium_ingot>, <primal:vanadium_ingot>],
-		[<primal:vanadium_ingot>, <primal:vanadium_ingot>, <primal:vanadium_ingot>]]);
+		[[<plastitech:ItemSmelted_iron_ingot>, <plastitech:ItemSmelted_iron_ingot>, <plastitech:ItemSmelted_iron_ingot>],
+		[<plastitech:ItemSmelted_iron_ingot>, <plastitech:ItemSmelted_iron_ingot>, <plastitech:ItemSmelted_iron_ingot>],
+		[<plastitech:ItemSmelted_iron_ingot>, <plastitech:ItemSmelted_iron_ingot>, <plastitech:ItemSmelted_iron_ingot>]]);
 
 
 //make quartz tools slag iron tools
@@ -144,27 +147,27 @@ recipes.remove(<primal:quartz_hoe>);
 <primal:quartz_shovel>.displayName = "Slag Iron Shovel";
 <primal:quartz_workblade>.displayName = "Slag Iron Workblade";
 recipes.addShaped(<primal:quartz_gallagher>,
-		[[<primal:pigiron_ingot>, <ore:cordageGeneral>, <primal:pigiron_ingot>],
-		[<primal:pigiron_ingot>, <ore:stickWood>, <primal:pigiron_ingot>], [null, <ore:stickWood>, null]]);
+		[[<plastitech:ItemSlag_iron_ingot>, <ore:cordageGeneral>, <plastitech:ItemSlag_iron_ingot>],
+		[<plastitech:ItemSlag_iron_ingot>, <ore:stickWood>, <plastitech:ItemSlag_iron_ingot>], [null, <ore:stickWood>, null]]);
 recipes.addShaped(<primal:quartz_workblade>,
-		[[null, <primal:pigiron_nugget>, <primal:pigiron_ingot>],
-		[<primal:pigiron_nugget>, <ore:cordageGeneral>, <primal:pigiron_nugget>],
-		[<ore:stickWood>, <primal:pigiron_nugget>, null]]);
+		[[null, <plastitech:ItemSlag_iron_nugget>, <plastitech:ItemSlag_iron_ingot>],
+		[<plastitech:ItemSlag_iron_nugget>, <ore:cordageGeneral>, <plastitech:ItemSlag_iron_nugget>],
+		[<ore:stickWood>, <plastitech:ItemSlag_iron_nugget>, null]]);
 recipes.addShaped(<primal:quartz_pickaxe>,
-		[[<primal:pigiron_nugget>, <ore:cordageGeneral>, <primal:pigiron_nugget>],
-		[<primal:pigiron_nugget>, <ore:stickWood>, <primal:pigiron_nugget>], [null, <ore:stickWood>, null]]);
+		[[<plastitech:ItemSlag_iron_nugget>, <ore:cordageGeneral>, <plastitech:ItemSlag_iron_nugget>],
+		[<plastitech:ItemSlag_iron_nugget>, <ore:stickWood>, <plastitech:ItemSlag_iron_nugget>], [null, <ore:stickWood>, null]]);
 recipes.addShaped(<primal:quartz_axe>,
-		[[<primal:pigiron_nugget>, <ore:cordageGeneral>, <primal:pigiron_nugget>],
-		[<primal:pigiron_nugget>, <ore:stickWood>, null], [null, <ore:stickWood>, null]]);
+		[[<plastitech:ItemSlag_iron_nugget>, <ore:cordageGeneral>, <plastitech:ItemSlag_iron_nugget>],
+		[<plastitech:ItemSlag_iron_nugget>, <ore:stickWood>, null], [null, <ore:stickWood>, null]]);
 recipes.addShaped(<primal:quartz_shovel>,
-		[[null, <primal:pigiron_ingot>, null], [null, <ore:cordageGeneral>, null], [null, <ore:stickWood>, null]]);
+		[[null, <plastitech:ItemSlag_iron_ingot>, null], [null, <ore:cordageGeneral>, null], [null, <ore:stickWood>, null]]);
 recipes.addShaped(<primal:quartz_hoe>,
-		[[<primal:pigiron_nugget>, <primal:pigiron_nugget>, <ore:cordageGeneral>],
+		[[<plastitech:ItemSlag_iron_nugget>, <plastitech:ItemSlag_iron_nugget>, <ore:cordageGeneral>],
 		[null, <ore:stickWood>, null], [<ore:stickWood>, null, null]]);
 recipes.addShaped(<primal:quartz_hatchet>,
-		[[<primal:pigiron_nugget>, <ore:cordageGeneral>], [null, <ore:stickWood>]]);
+		[[<plastitech:ItemSlag_iron_nugget>, <ore:cordageGeneral>], [null, <ore:stickWood>]]);
 recipes.addShaped(<primal:quartz_shears>,
-		[[null, <primal:pigiron_nugget>], [<primal:pigiron_nugget>, <ore:cordageGeneral>]]);
+		[[null, <plastitech:ItemSlag_iron_nugget>], [<plastitech:ItemSlag_iron_nugget>, <ore:cordageGeneral>]]);
 
 
 //bwm tweaks
@@ -183,17 +186,21 @@ recipes.addShapeless(<primal:netherstone> * 5,
 		[<minecraft:planks:5>, <betterwithmods:material:13>, <minecraft:planks:5>,
 		<minecraft:planks:5>, <minecraft:planks:5>, <minecraft:planks:5>]);
 recipes.addShaped(<betterwithmods:saw>,
-		[[<primal:vanadium_ingot>, <primal:vanadium_ingot>, <primal:vanadium_ingot>],
+		[[<plastitech:ItemSmelted_iron_ingot>, <plastitech:ItemSmelted_iron_ingot>, <plastitech:ItemSmelted_iron_ingot>],
 		[<ore:gearWood>, <betterwithmods:material:9>, <ore:gearWood>],
 		[<ore:plankWood>, <ore:gearWood>, <ore:plankWood>]]);
 recipes.addShaped(<betterwithmods:saw>,
-		[[<primal:vanadium_ingot>, <primal:vanadium_ingot>, <primal:vanadium_ingot>],
+		[[<plastitech:ItemSmelted_iron_ingot>, <plastitech:ItemSmelted_iron_ingot>, <plastitech:ItemSmelted_iron_ingot>],
 		[<ore:gearWood>, <betterwithmods:material:9>, <ore:gearWood>],
 		[<betterwithmods:wood_siding:*>, <ore:gearWood>, <betterwithmods:wood_siding:*>]]);
 mods.betterwithmods.Cauldron.add(<minecraft:ice>, <minecraft:bucket>,
 		[<toughasnails:ice_cube> * 4, <minecraft:water_bucket>]);
 mods.betterwithmods.Cauldron.add(<minecraft:water_bucket>, null, [<minecraft:bucket>, <minecraft:ice>]);
 mods.betterwithmods.StokedCrucible.remove(<minecraft:iron_ingot> * 3);
+mods.betterwithmods.StokedCrucible.add(<minecraft:iron_ingot> * 3, null, [<minecraft:iron_pickaxe>]);
+mods.betterwithmods.StokedCrucible.add(<minecraft:iron_ingot> * 3, null, [<minecraft:iron_axe>]);
+mods.betterwithmods.StokedCrucible.add(<minecraft:iron_ingot> * 3, null, [<minecraft:rail> * 8]);
+mods.betterwithmods.StokedCrucible.add(<minecraft:iron_ingot> * 3, null, [<minecraft:iron_bars> * 8]);
 mods.betterwithmods.Cauldron.add(<toughasnails:jelled_slime>, null,
 		[<toughasnails:ice_cube> * 5, <minecraft:slime_ball>, <betterwithmods:material:1>]);
 mods.betterwithmods.Crucible.add(<minecraft:redstone> * 63, null, [<betterwithmods:material:17> * 4, <minecraft:glowstone> * 7]);
@@ -292,10 +299,10 @@ recipes.remove(<embers:grandhammer>);
 <ore:ingotBronze>.remove(<primal:bronze_ingot>);
 <ore:ingotCopper>.remove(<primal:copper_ingot>);
 <ore:ingotLead>.remove(<primal:lead_ingot>);
-<ore:ingotPigiron>.remove(<primal:pigiron_ingot>);
+<ore:ingotPigiron>.remove(<plastitech:ItemSlag_iron_ingot>);
 <ore:ingotSilver>.remove(<primal:silver_ingot>);
 <ore:ingotTin>.remove(<primal:tin_ingot>);
-<ore:ingotVanadium>.remove(<primal:vanadium_ingot>);
+<ore:ingotVanadium>.remove(<plastitech:ItemSmelted_iron_ingot>);
 <ore:ingotWootz>.remove(<primal:wootz_ingot>);
 <ore:ingotZinc>.remove(<primal:zinc_ingot>);
 <ore:dustCopper>.remove(<primal:copper_dust>);
@@ -397,9 +404,9 @@ recipes.addShaped(<roots:mortar>,
 		[<primal:carbonate_ferro_flag>, null, <primal:carbonate_ferro_flag>],
 		[null, <primal:carbonate_ferro_flag>, null]]);
 mods.betterwithmods.Mill.add(<primal:carbonate_ferro_flag>,
-		<primal:vanadium_dust> * 2,
+		<plastitech:ItemSmelted_iron_dust> * 2,
 		[<primal:vanadium_block>]);
-furnace.addRecipe(<primal:vanadium_ingot>, <primal:vanadium_dust>, 0.5);
+furnace.addRecipe(<plastitech:ItemSmelted_iron_ingot>, <plastitech:ItemSmelted_iron_dust>, 0.5);
 mods.betterwithmods.Cauldron.add(<primal:carbonate_brick>, <minecraft:bucket>,
 		[<minecraft:water_bucket>, <minecraft:stonebrick>, <minecraft:dye:1> * 4,
 		<minecraft:dye:11> * 4, <roots:verdantSprig> * 2]);
@@ -419,7 +426,7 @@ recipes.remove(<charsettweaks:graphite>);
 mods.betterwithmods.StokedCrucible.add(<charsettweaks:graphite>, null, [<primal:ash> * 4]);
 mods.betterwithmods.Cauldron.add(<primal:copper_dust>, <primal:carbonate_slack> * 9,
 		[<primal:bronze_dust>, <minecraft:ice>]);
-mods.betterwithmods.StokedCrucible.add(<primal:pigiron_dust>, <primal:copper_dust> * 2,
+mods.betterwithmods.StokedCrucible.add(<plastitech:ItemSlag_iron_dust>, <primal:copper_dust> * 2,
 		[<primal:carbonate_slack> * 5, <betterwithmods:material:39> * 3]);
 recipes.remove(<ceramics:unfired_clay:4>);
 mods.betterwithmods.Crucible.add(<ceramics:unfired_clay:4> * 5, null,
@@ -519,7 +526,7 @@ recipes.remove(<literalascension:gold_carving_tool>);
 # ===============================================
 
 recipes.remove(<toughasnails:season_clock>);
-recipes.addShaped(<toughasnails:season_clock>, [[null, <primal:pigiron_ingot>, null], [<primal:pigiron_ingot>, <minecraft:redstone>, <primal:pigiron_ingot>], [null, <primal:pigiron_ingot>, null]]);
+recipes.addShaped(<toughasnails:season_clock>, [[null, <plastitech:ItemSlag_iron_ingot>, null], [<plastitech:ItemSlag_iron_ingot>, <minecraft:redstone>, <plastitech:ItemSlag_iron_ingot>], [null, <plastitech:ItemSlag_iron_ingot>, null]]);
 <toughasnails:glowstone_torch>.displayName = "Mystical Glowstone Torch";
 recipes.addShapeless(<toughasnails:glowstone_torch>,
     [<betterwithmods:material:17>, <betterwithmods:material:17>, <betterwithmods:material:17>,
@@ -532,8 +539,8 @@ recipes.addShapeless(<toughasnails:glowstone_torch>,
 
 recipes.remove(<spiceoflife:lunchbox>);
 recipes.addShapedMirrored(<spiceoflife:lunchbox>,
-    [[<primal:pigiron_ingot>, null, <primal:pigiron_ingot>],
-    [null, <primal:pigiron_ingot>, null]]);
+    [[<plastitech:ItemSlag_iron_ingot>, null, <plastitech:ItemSlag_iron_ingot>],
+    [null, <plastitech:ItemSlag_iron_ingot>, null]]);
 
 
 # ===============================================
@@ -568,6 +575,45 @@ recipes.addShaped(<modularrouters:blankUpgrade>,
     [<betterwithmods:material:14>, <modularrouters:blankModule>, <betterwithmods:material:14>],
     [<betterwithmods:material:14>, <minecraft:gold_ingot>, <betterwithmods:material:14>]]);
 
+
+# ================================================
+# "PlastiTech" tweaks
+# ================================================
+
+recipes.remove(<plastitech:ItemDiamantine_ingot>);
+mods.betterwithmods.StokedCrucible.add(<plastitech:ItemDiamantine_ingot>,
+    null, [<plastitech:ItemSoul_ash>, <minecraft:iron_ingot>, <minecraft:diamond>]);
+recipes.remove(<minecraft:diamond_sword>);
+recipes.remove(<minecraft:diamond_shovel>);
+recipes.remove(<minecraft:diamond_pickaxe>);
+recipes.remove(<minecraft:diamond_axe>);
+recipes.remove(<minecraft:diamond_hoe>);
+recipes.addShapedMirrored(<minecraft:diamond_sword>,
+		[[null, diamantine_ingot, null],
+		[leather_strap, diamantine_ingot, leather_strap],
+		[null, stick, null]]);
+recipes.addShapedMirrored(<minecraft:diamond_shovel>,
+		[[null, diamantine_ingot, null],
+		[leather_strap, stick, leather_strap],
+		[null, stick, null]]);
+recipes.addShapedMirrored(<minecraft:diamond_pickaxe>,
+		[[diamantine_ingot, diamantine_ingot, diamantine_ingot],
+		[leather_strap, stick, leather_strap],
+		[null, stick, null]]);
+recipes.addShapedMirrored(<minecraft:diamond_axe>,
+		[[diamantine_ingot, diamantine_ingot, leather_strap],
+		[diamantine_ingot, stick, leather_strap],
+		[null, stick, null]]);
+recipes.addShapedMirrored(<minecraft:diamond_hoe>,
+		[[diamantine_ingot, diamantine_ingot, null],
+		[leather_strap, stick, leather_strap],
+		[null, stick, null]]);
+recipes.addShapeless(<plastitech:ItemSlag_iron_ingot>, [<primal:pigiron_ingot>]);
+recipes.addShapeless(<plastitech:ItemSlag_iron_dust>, [<primal:pigiron_dust>]);
+recipes.addShapeless(<plastitech:ItemSlag_iron_nugget>, [<primal:pigiron_nugget>]);
+recipes.addShapeless(<plastitech:ItemSmelted_iron_dust>, [<primal:vanadium_dust>]);
+recipes.addShapeless(<plastitech:ItemSmelted_iron_ingot>, [<primal:vanadium_ingot>]);
+recipes.addShapeless(<plastitech:ItemSmelted_iron_nugget>, [<primal:vanadium_nugget>]);
 
 
 # ================================================
@@ -635,9 +681,9 @@ recipes.addShaped(<spartanshields:shieldBasicWood>,
 		[<primal:nether_palm_plank>, <primal:nether_palm_plank>, null]]);
 recipes.remove(<spartanshields:shieldBasicStone>);
 recipes.addShaped(<spartanshields:shieldBasicStone>,
-		[[null, <primal:pigiron_ingot>, null],
-		[<primal:pigiron_ingot>, <spartanshields:shieldBasicWood>, <primal:pigiron_ingot>],
-		[null, <primal:pigiron_ingot>, null]]);
+		[[null, <plastitech:ItemSlag_iron_ingot>, null],
+		[<plastitech:ItemSlag_iron_ingot>, <spartanshields:shieldBasicWood>, <plastitech:ItemSlag_iron_ingot>],
+		[null, <plastitech:ItemSlag_iron_ingot>, null]]);
 //recipes.addShaped(<spartanshields:shieldBasicIron>
 //recipes.addShaped(<spartanshields:shieldBasicGold>
 recipes.remove(<spartanshields:shieldBasicDiamond>);
